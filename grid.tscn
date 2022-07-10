@@ -1,0 +1,21 @@
+[gd_scene format=2]
+
+[node name="CenterContainer" type="CenterContainer"]
+margin_right = 600.0
+margin_bottom = 1024.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 600, 1024 )
+rect_pivot_offset = Vector2( 300, 512 )
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 300.0
+margin_top = 512.0
+margin_right = 300.0
+margin_bottom = 512.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 18, 18 )
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 4
