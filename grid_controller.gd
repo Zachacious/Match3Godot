@@ -21,6 +21,7 @@ var tile_coord_offset = Vector2(full_tile_size,full_tile_size)/2
 
 # for detecting the first and final tiles to swap
 var first_tile = -1
+var first_coords = Vector2()
 var final_tile = -1
 
 # creates all the tiles needed to fill the grid
@@ -80,13 +81,19 @@ func touch_input():
 	# on initial touch
 	if Input.is_action_just_pressed("ui_touch"):
 		# local coords are relative to the grid
-		var coords = self.get_local_mouse_position()
+		first_coords = self.get_local_mouse_position()
 		# cache the tile the mouse is over
-		first_tile = coords_to_tile_index(coords)
+		first_tile = coords_to_tile_index(first_coords)
 
 	# on release
 	if Input.is_action_just_released("ui_touch"):
 		var coords = self.get_local_mouse_position()
+		print(coords)
+		var delta = (coords - first_coords).normalized().snapped(Vector2(1,1))
+		var final_offset = Vector2(full_tile_size, full_tile_size) * delta
+		coords = first_coords + final_offset
+		print(coords)
+		
 		# get the tile that the touch was released on
 		final_tile = coords_to_tile_index(coords)
 		# make sure we're dealing with tiles that are
