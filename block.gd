@@ -1,18 +1,20 @@
 extends Node2D
 
 # configurables
-export var isMatched = false
 export var index = 0
 export var texture_index = 0
-export var tween_speed = 0.25
+export var tween_speed = 0.35
 
 onready var sprite = $sprite
 onready var move_tween = $move_tween
 
+onready var isMatched = false
+
 # tween position changes
 func move(target):
 	move_tween.stop_all()
-	move_tween.interpolate_property(self, "position", position, target, tween_speed, Tween.TRANS_BACK, Tween.EASE_OUT)
+	move_tween.interpolate_property(self, "position", position, target,\
+	 tween_speed, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	move_tween.start()
 	
 # called by the parent grid container to move the node to a

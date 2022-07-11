@@ -24,6 +24,7 @@ var first_tile = -1
 var first_coords = Vector2()
 var final_tile = -1
 
+
 # creates all the tiles needed to fill the grid
 func create_tiles():
 	for i in range(0, total_tiles):
@@ -38,6 +39,7 @@ func create_tiles():
 
 		self.add_child(tile) # actually add to the render tree
 
+
 # swaps 2 tiles in the render tree	
 func swap_tiles(tile_a, tile_b):
 	# cache current indicies
@@ -47,16 +49,19 @@ func swap_tiles(tile_a, tile_b):
 	tile_a.set_index(index_b);
 	tile_b.set_index(index_a);
 	
+	
 # converts coords from full viewport space into grid space
 # - simply adds a small offset needed to get it right
 # - the coords passed should be local(relative) mouse coords
 func view_coords_to_grid_coords(coords):
 	return coords + tile_coord_offset 
 
+
 # converts tile x,y position into the corresponding index
 # (because we're using a flat array)
 func grid_xy_to_index(coords):
 	return ((coords.y - 1)*cols) + coords.x
+
 
 # returns the tile index on the grid under the coords passed in
 func coords_to_tile_index(coords):
@@ -76,6 +81,7 @@ func coords_to_tile_index(coords):
 	# checks if the y-axis is in line by checking the index
 	return index if index > -1 and index <= total_tiles - 1 else -1
 	
+	
 # handle input for mouse/touch	
 func touch_input():
 	# on initial touch
@@ -88,11 +94,17 @@ func touch_input():
 	# on release
 	if Input.is_action_just_released("ui_touch"):
 		var coords = self.get_local_mouse_position()
-		print(coords)
+		# get the relative direction of the mouse
+		# create an offset that moves the initial touch
+		# position over one tile in the direction of the mouse
+		# movement - use those coordinates to get the tile
+		# that we need to swap with
 		var delta = (coords - first_coords).normalized().snapped(Vector2(1,1))
+		# need to block diagonal movement - if neither delta value is 0 - bail
+		if delta.x != 0 and delta.y !=0: return
 		var final_offset = Vector2(full_tile_size, full_tile_size) * delta
 		coords = first_coords + final_offset
-		print(coords)
+
 		
 		# get the tile that the touch was released on
 		final_tile = coords_to_tile_index(coords)
@@ -104,6 +116,7 @@ func touch_input():
 			# perform the swap on those tiles
 			swap_tiles(tiles[first_tile], tiles[final_tile])
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# The grid is already center positioned on the screen
@@ -111,6 +124,7 @@ func _ready():
 	self.position.x -= width/2
 	self.position.y -= height/2
 	create_tiles()
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
