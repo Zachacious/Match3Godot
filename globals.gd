@@ -12,7 +12,3 @@ var blocks =  [
 	{'name':'magenta', 'texture':preload("res://sprites/magenta.png")},
 	{'name':'seaweed','texture':preload("res://sprites/seaweed.png")},
 ]
-
-
-func dedup_set(array, value):
-	if !array.has(value): array.push(value)

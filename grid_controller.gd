@@ -48,8 +48,16 @@ func swap_tiles(tile_a, tile_b):
 	# allow each tile to move themselves
 	tile_a.set_index(index_b)
 	tile_b.set_index(index_a)
-	tile_a.find_matches()
-	tile_b.find_matches()
+	var a_has_matches = tile_a.find_matches()
+	var b_has_matches = tile_b.find_matches()
+	# wait for the movement tweens to finish
+	yield(get_tree().create_timer(.2), "timeout")
+	
+	# if no matches were made - move them back
+	if !a_has_matches and !b_has_matches:
+		# Move them back
+		tile_a.set_index(index_a)
+		tile_b.set_index(index_b)
 	
 	
 # converts coords from full viewport space into grid space
