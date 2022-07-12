@@ -2,8 +2,8 @@ extends Node
 
 var grid = {
 	'index_positions': {},
+	'coords': {}
 }
-
 
 var blocks =  [
 	{'name':'red', 'texture': preload("res://sprites/red.png")},
@@ -12,3 +12,7 @@ var blocks =  [
 	{'name':'magenta', 'texture':preload("res://sprites/magenta.png")},
 	{'name':'seaweed','texture':preload("res://sprites/seaweed.png")},
 ]
+
+
+func dedup_set(array, value):
+	if !array.has(value): array.push(value)

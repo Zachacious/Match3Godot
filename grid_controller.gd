@@ -46,8 +46,10 @@ func swap_tiles(tile_a, tile_b):
 	var index_a = tile_a.index
 	var index_b = tile_b.index
 	# allow each tile to move themselves
-	tile_a.set_index(index_b);
-	tile_b.set_index(index_a);
+	tile_a.set_index(index_b)
+	tile_b.set_index(index_a)
+	tile_a.find_matches()
+	tile_b.find_matches()
 	
 	
 # converts coords from full viewport space into grid space
@@ -99,7 +101,7 @@ func touch_input():
 		# position over one tile in the direction of the mouse
 		# movement - use those coordinates to get the tile
 		# that we need to swap with
-		var delta = (coords - first_coords).normalized().snapped(Vector2(1,1))
+		var delta = (coords - first_coords).normalized().snapped(Vector2(1,1)) # right = 1,0
 		# need to block diagonal movement - if neither delta value is 0 - bail
 		if delta.x != 0 and delta.y !=0: return
 		var final_offset = Vector2(full_tile_size, full_tile_size) * delta
