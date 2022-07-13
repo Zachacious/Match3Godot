@@ -19,6 +19,7 @@ onready var direction_deltas = {
 # caching the parent - set in ready
 var parent
 
+var ready_for_deletion = false
 
 # tween position changes
 func move(target):
@@ -124,4 +125,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	if ready_for_deletion: queue_free() # delete this from the tree
 	if isMatched: dim()

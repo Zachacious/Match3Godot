@@ -24,20 +24,23 @@ var first_tile = -1
 var first_coords = Vector2()
 var final_tile = -1
 
+var has_matches = false
+
+func create_tile(tile_index):
+	var tile = preload("res://block.tscn").instance()
+	tile.index = tile_index
+	# calc pixel position
+	var tile_pos = Vector2((tile_index % cols) * full_tile_size, (tile_index / cols) * full_tile_size)
+	tile.position = tile_pos
+	# store the position for this index in the global hash map for fast lookups
+	Globals.grid.index_positions[tile_index] = tile_pos
+	self.add_child(tile) # actually add to the render tree
+
 
 # creates all the tiles needed to fill the grid
 func create_tiles():
 	for i in range(0, total_tiles):
-		var tile = preload("res://block.tscn").instance()
-		
-		tile.index = i
-		# calc pixel position
-		var tile_pos = Vector2((i % cols) * full_tile_size, (i / cols) * full_tile_size)
-		tile.position = tile_pos
-		# store the position for this index in the global hash map for fast lookups
-		Globals.grid.index_positions[i] = tile_pos
-
-		self.add_child(tile) # actually add to the render tree
+		create_tile(i)
 
 
 # swaps 2 tiles in the render tree	
@@ -58,6 +61,9 @@ func swap_tiles(tile_a, tile_b):
 		# Move them back
 		tile_a.set_index(index_a)
 		tile_b.set_index(index_b)
+	else:
+		#handle_matches()
+		has_matches = true
 	
 	
 # converts coords from full viewport space into grid space
@@ -126,6 +132,50 @@ func touch_input():
 			# perform the swap on those tiles
 			swap_tiles(tiles[first_tile], tiles[final_tile])
 
+# from left to right scan each column from top to bottom
+# - if encounter cell mark 'has_match' -> remove
+# - move all prev tiles in col down
+# - add new tile to top
+func handle_matches():
+	var tiles = get_children()
+
+	for col in cols:
+		var start_index = col
+		var cur_index = col
+		var distance = cols # move the index this much to reach next row 
+		# we need to store each tile as we go down
+		var unmarked_tiles = []
+		var marked_tiles = []
+
+		for cell in rows:
+			var tile = tiles[cur_index]
+			if !tile.isMatched:
+				if marked_tiles.size() == 0: unmarked_tiles.append(tile)
+				else: 
+					#for marked in marked_tiles:
+						#var marked_index = marked.index
+						#var mtile = tiles[marked_index]
+						#tiles[marked_index] = 0
+						#tiles[marked.index] = null
+						
+						#marked.ready_for_deletion = true
+					for unmarked_tile in unmarked_tiles:
+						var move_offset = distance * marked_tiles.size()
+						unmarked_tile.set_index(unmarked_tile.index + move_offset)
+					#for removed_iter in range(0, marked_tiles.size() - 1):
+						#create_tile(start_index + removed_iter)
+
+							
+					marked_tiles.clear()
+						
+			else:
+				marked_tiles.append(tile)
+				
+			cur_index += distance
+			
+	print(get_children())
+	has_matches = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -139,3 +189,5 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	touch_input()
+	if has_matches:
+		handle_matches()
