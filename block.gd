@@ -33,7 +33,8 @@ func move(target):
 # new postiion on the grid
 func set_index(new_index):
 	index = new_index
-	self.get_parent().move_child(self, index)
+	# self.get_parent().move_child(self, index)
+	#get_parent().grid_tiles[index] = self
 	move(Globals.grid.index_positions[index])
 	
 
@@ -58,7 +59,7 @@ func isTileInMatchableLane(tile_index, direction):
 # called by the parent grid if this tile is moved
 func find_matches():
 	var matches_were_made = false
-	var tiles = parent.get_children()
+	var tiles = parent.grid_tiles
 	# store matches for each direction
 	var matches = {
 		'right': [self],
@@ -75,10 +76,12 @@ func find_matches():
 		# if the next tile is out of bounds - move to next direction
 		if !isTileInMatchableLane(next_index, direction): continue
 		var tile = tiles[next_index]
+		if tile == null: continue
 		# as long as the next tile in the current direction is a match
 		# and is in-bounds continue iterating and setting matches
 		while tile.texture_index == self.texture_index:
 			tile = tiles[next_index]
+			if tile == null: break
 			if tile.texture_index != self.texture_index: break
 			matches[direction].append(tile)
 			next_index += delta

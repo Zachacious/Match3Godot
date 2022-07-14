@@ -24,9 +24,9 @@ var first_tile = -1
 var first_coords = Vector2()
 var final_tile = -1
 
-var has_matches = false
+var grid_tiles = []
 
-func create_tile(tile_index):
+func create_tile(tile_index, subplant = false):
 	var tile = preload("res://block.tscn").instance()
 	tile.index = tile_index
 	# calc pixel position
@@ -35,6 +35,8 @@ func create_tile(tile_index):
 	# store the position for this index in the global hash map for fast lookups
 	Globals.grid.index_positions[tile_index] = tile_pos
 	self.add_child(tile) # actually add to the render tree
+	if !subplant: grid_tiles.append(tile)
+	else: grid_tiles[tile_index] = tile
 
 
 # creates all the tiles needed to fill the grid
@@ -45,25 +47,34 @@ func create_tiles():
 
 # swaps 2 tiles in the render tree	
 func swap_tiles(tile_a, tile_b):
+	if tile_a == null or tile_b == null: return
 	# cache current indicies
 	var index_a = tile_a.index
 	var index_b = tile_b.index
+
+	grid_tiles[index_a] = tile_b
+	grid_tiles[index_b] = tile_a
 	# allow each tile to move themselves
 	tile_a.set_index(index_b)
 	tile_b.set_index(index_a)
+	yield(get_tree().create_timer(.2), "timeout")
 	var a_has_matches = tile_a.find_matches()
 	var b_has_matches = tile_b.find_matches()
 	# wait for the movement tweens to finish
-	yield(get_tree().create_timer(.2), "timeout")
+	#yield(get_tree().create_timer(.2), "timeout")
 	
 	# if no matches were made - move them back
 	if !a_has_matches and !b_has_matches:
 		# Move them back
+		grid_tiles[index_a] = tile_a
+		grid_tiles[index_b] = tile_b
 		tile_a.set_index(index_a)
 		tile_b.set_index(index_b)
 	else:
-		#handle_matches()
-		has_matches = true
+		yield(get_tree().create_timer(.3), "timeout")
+		remove_matches()
+		yield(get_tree().create_timer(.2), "timeout")
+		collapse_columns()
 	
 	
 # converts coords from full viewport space into grid space
@@ -128,54 +139,55 @@ func touch_input():
 		# within the bounds of the grid
 		if first_tile > -1 and final_tile > -1:
 			# get the update list of tiles
-			var tiles = self.get_children()
+			var tiles = grid_tiles
 			# perform the swap on those tiles
 			swap_tiles(tiles[first_tile], tiles[final_tile])
 
-# from left to right scan each column from top to bottom
-# - if encounter cell mark 'has_match' -> remove
-# - move all prev tiles in col down
-# - add new tile to top
-func handle_matches():
-	var tiles = get_children()
-
+func remove_matches():
+	for tile_index in range(0, grid_tiles.size()):
+		var tile = grid_tiles[tile_index]
+		if tile != null && tile.isMatched:
+			grid_tiles[tile_index] = null
+			remove_child(tile)
+			tile.queue_free()
+			
+			
+func collapse_columns():
 	for col in cols:
 		var start_index = col
 		var cur_index = col
 		var distance = cols # move the index this much to reach next row 
 		# we need to store each tile as we go down
-		var unmarked_tiles = []
-		var marked_tiles = []
-
-		for cell in rows:
-			var tile = tiles[cur_index]
-			if !tile.isMatched:
-				if marked_tiles.size() == 0: unmarked_tiles.append(tile)
+		var unmatched_tiles = []
+		var matched_tiles = []
+		for cell in rows+1:
+			var tile = 0 if cur_index >= total_tiles else grid_tiles[cur_index]
+			if tile != null:
+				if matched_tiles.size() == 0: unmatched_tiles.append(tile)
 				else: 
-					#for marked in marked_tiles:
-						#var marked_index = marked.index
-						#var mtile = tiles[marked_index]
-						#tiles[marked_index] = 0
-						#tiles[marked.index] = null
-						
-						#marked.ready_for_deletion = true
-					for unmarked_tile in unmarked_tiles:
-						var move_offset = distance * marked_tiles.size()
-						unmarked_tile.set_index(unmarked_tile.index + move_offset)
-					#for removed_iter in range(0, marked_tiles.size() - 1):
-						#create_tile(start_index + removed_iter)
+					for unmatched_tile in unmatched_tiles:
+						var move_offset = distance * matched_tiles.size()
+						var old_index = unmatched_tile.index
+						var new_index = unmatched_tile.index + move_offset
+						grid_tiles[new_index] = unmatched_tile
+						unmatched_tile.set_index(new_index)
+						#grid_tiles[old_index] = null
 
-							
-					marked_tiles.clear()
+					for matched_iter in range(0, matched_tiles.size()):
+						var index = start_index + (matched_iter * distance)
+						create_tile(index, true)
+
+					break;
 						
 			else:
-				marked_tiles.append(tile)
+				matched_tiles.append(tile)
 				
 			cur_index += distance
+			print(get_children().size())
 			
-	print(get_children())
-	has_matches = false
-
+	
+func refill_columns():
+	pass
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -189,5 +201,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	touch_input()
-	if has_matches:
-		handle_matches()
