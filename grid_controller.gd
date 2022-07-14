@@ -4,6 +4,9 @@
 
 extends Node2D
 
+# signals
+signal subplanted_tile_created
+
 # configurables
 export var cols = 7
 export var rows = 10
@@ -36,8 +39,14 @@ func create_tile(tile_index, subplant = false):
 	Globals.grid.index_positions[tile_index] = tile_pos
 	self.add_child(tile) # actually add to the render tree
 	if !subplant: grid_tiles.append(tile)
-	else: grid_tiles[tile_index] = tile
+	else: 
+		grid_tiles[tile_index] = tile
+		# position back by 200
+		tile.position = Vector2(tile_pos.x, tile_pos.y - 100)
+		emit_signal("subplanted_tile_created", tile, tile_pos)
 
+func _on_subplanted_tile_created(tile, tile_pos):
+	tile.move(tile_pos)
 
 # creates all the tiles needed to fill the grid
 func create_tiles():
@@ -143,6 +152,7 @@ func touch_input():
 			# perform the swap on those tiles
 			swap_tiles(tiles[first_tile], tiles[final_tile])
 
+
 func remove_matches():
 	for tile_index in range(0, grid_tiles.size()):
 		var tile = grid_tiles[tile_index]
@@ -151,6 +161,11 @@ func remove_matches():
 			remove_child(tile)
 			tile.queue_free()
 			
+			
+func refill_column(matched_tiles, col_start_index, distance):
+	for matched_iter in range(0, matched_tiles.size()):
+		var index = col_start_index + (matched_iter * distance)
+		create_tile(index, true)
 			
 func collapse_columns():
 	for col in cols:
@@ -167,34 +182,27 @@ func collapse_columns():
 				else: 
 					for unmatched_tile in unmatched_tiles:
 						var move_offset = distance * matched_tiles.size()
-						var old_index = unmatched_tile.index
 						var new_index = unmatched_tile.index + move_offset
 						grid_tiles[new_index] = unmatched_tile
 						unmatched_tile.set_index(new_index)
-						#grid_tiles[old_index] = null
 
-					for matched_iter in range(0, matched_tiles.size()):
-						var index = start_index + (matched_iter * distance)
-						create_tile(index, true)
-
+					#for matched_iter in range(0, matched_tiles.size()):
+					#	var index = start_index + (matched_iter * distance)
+					#	create_tile(index, true)
+					refill_column(matched_tiles, start_index, distance)
 					break;
-						
 			else:
 				matched_tiles.append(tile)
-				
 			cur_index += distance
-			print(get_children().size())
-			
-	
-func refill_columns():
-	pass
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	connect("subplanted_tile_created", self, "_on_subplanted_tile_created")
 	# The grid is already center positioned on the screen
 	# we need to offset it with the size of the created grid
-	self.position.x -= width/2
-	self.position.y -= height/2
+	position.x -= width/2
+	position.y -= height/2
 	create_tiles()
 
 
