@@ -36,6 +36,7 @@ enum states {
 var state = states.ready
 
 func match_whole_grid():
+	var found_matches = false
 	for tile in grid_tiles:
 		if tile == null: continue
 		var texture_index = tile.texture_index
@@ -52,7 +53,7 @@ func match_whole_grid():
 				tile.isMatched = true
 				up_tile.isMatched = true
 				up_tile2.isMatched = true
-				return true
+				found_matches = true
 		if left_index >= 0 && tile_row == left_row:
 			var left_tile = grid_tiles[left_index]
 			var left_tile2 = grid_tiles[left_index + 1]
@@ -62,9 +63,9 @@ func match_whole_grid():
 				tile.isMatched = true
 				left_tile.isMatched = true
 				left_tile2.isMatched = true
-				return true
+				found_matches = true
 				
-	return false
+	return found_matches
 			
 
 # returns true if the tile 2 up or 2 left matches
