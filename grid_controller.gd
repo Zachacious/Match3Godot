@@ -29,6 +29,56 @@ var final_tile = -1
 
 var grid_tiles = []
 
+func match_whole_grid():
+	for tile in grid_tiles:
+		if tile == null: continue
+		var texture_index = tile.texture_index
+		var up_index = tile.index - (cols * 2)
+		var left_index = tile.index - 2
+		var tile_row = Globals.grid.coords[tile.index].y
+		var left_row = Globals.grid.coords[left_index].y if left_index >= 0 else -1
+		if up_index >= 0:
+			var up_tile = grid_tiles[up_index]
+			var up_tile2 = grid_tiles[up_index + cols]
+			var up_texture = up_tile.texture_index
+			var up_texture2 = up_tile2.texture_index
+			if texture_index == up_texture && texture_index == up_texture2: 
+				tile.isMatched = true
+				up_tile.isMatched = true
+				up_tile2.isMatched = true
+				return true
+		if left_index >= 0 && tile_row == left_row:
+			var left_tile = grid_tiles[left_index]
+			var left_tile2 = grid_tiles[left_index + 1]
+			var left_texture = left_tile.texture_index
+			var left_texture2 = left_tile2.texture_index
+			if texture_index == left_texture && texture_index == left_texture2: 
+				tile.isMatched = true
+				left_tile.isMatched = true
+				left_tile2.isMatched = true
+				return true
+				
+	return false
+			
+
+# returns true if the tile 2 up or 2 left matches
+func look_back_match(tile):
+	var texture_index = tile.texture_index
+	var up_index = tile.index - (cols * 2)
+	var left_index = tile.index - 2
+	var tile_row = Globals.grid.coords[tile.index].y
+	var left_row = Globals.grid.coords[left_index].y if left_index >= 0 else -1
+	if up_index >= 0:
+		var up_tile = grid_tiles[up_index]
+		var up_texture = up_tile.texture_index
+		if texture_index == up_texture: return true
+	if left_index >= 0 && tile_row == left_row:
+		var left_tile = grid_tiles[left_index]
+		var left_texture = left_tile.texture_index
+		if texture_index == left_texture: return true
+	return false
+	
+
 func create_tile(tile_index, subplant = false):
 	var tile = preload("res://block.tscn").instance()
 	tile.index = tile_index
@@ -44,6 +94,9 @@ func create_tile(tile_index, subplant = false):
 		# position back by 200
 		tile.position = Vector2(tile_pos.x, tile_pos.y - 100)
 		emit_signal("subplanted_tile_created", tile, tile_pos)
+	
+	while look_back_match(tile): tile.regen_texture()
+		
 
 func _on_subplanted_tile_created(tile, tile_pos):
 	tile.move(tile_pos)
@@ -53,6 +106,13 @@ func create_tiles():
 	for i in range(0, total_tiles):
 		create_tile(i)
 
+
+func clean_grid():
+	yield(get_tree().create_timer(.3), "timeout")
+	remove_matches()
+	yield(get_tree().create_timer(.2), "timeout")
+	collapse_columns()
+	
 
 # swaps 2 tiles in the render tree	
 func swap_tiles(tile_a, tile_b):
@@ -80,10 +140,11 @@ func swap_tiles(tile_a, tile_b):
 		tile_a.set_index(index_a)
 		tile_b.set_index(index_b)
 	else:
-		yield(get_tree().create_timer(.3), "timeout")
-		remove_matches()
-		yield(get_tree().create_timer(.2), "timeout")
-		collapse_columns()
+		clean_grid()
+		yield(get_tree().create_timer(1), "timeout")
+		while match_whole_grid():
+			clean_grid()
+			yield(get_tree().create_timer(1), "timeout")
 	
 	
 # converts coords from full viewport space into grid space
@@ -168,6 +229,8 @@ func refill_column(matched_tiles, col_start_index, distance):
 		create_tile(index, true)
 			
 func collapse_columns():
+	var animation_delay = 0
+	
 	for col in cols:
 		var start_index = col
 		var cur_index = col

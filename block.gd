@@ -109,16 +109,20 @@ func find_matches():
 # temporary
 func dim(): sprite.modulate = Color(1,1,1,0.3)	
 
+# regenerate texture
+func regen_texture():
+	# choose a texture at random and apply to sprite
+	randomize()
+	texture_index = randi() % 5
+	sprite.set_texture(Globals.blocks[texture_index].texture)
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	parent = self.get_parent()
 	direction_deltas.top = -parent.cols
 	direction_deltas.bottom = parent.cols
 
-	# choose a texture at random and apply to sprite
-	randomize()
-	texture_index = randi() % 5
-	sprite.set_texture(Globals.blocks[texture_index].texture)
+	regen_texture()
 	
 	# set grid position for the global
 	# lookup table
