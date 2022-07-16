@@ -20,3 +20,5 @@ var blocks =  [
 	{'name':'pig', 'texture':preload("res://sprites/monsters/pig.png")},
 	{'name':'rabbit','texture':preload("res://sprites/monsters/rabbit.png")},
 ]
+
+var tile_tween = null

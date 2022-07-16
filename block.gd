@@ -8,6 +8,7 @@ export var tween_speed = 0.35
 onready var sprite = $sprite
 onready var move_tween = $move_tween
 
+
 onready var isMatched = false
 onready var direction_deltas = {
 	'right': 1,

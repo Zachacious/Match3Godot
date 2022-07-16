@@ -36,6 +36,7 @@ enum states {
 var state = states.ready
 
 func match_whole_grid():
+	print('match_grid.start')
 	var found_matches = false
 	for tile in grid_tiles:
 		if tile == null: continue
@@ -64,6 +65,7 @@ func match_whole_grid():
 				left_tile.isMatched = true
 				left_tile2.isMatched = true
 				found_matches = true
+	print('match_grid.end')
 				
 	return found_matches
 			
@@ -115,10 +117,10 @@ func create_tiles():
 
 
 func clean_grid():
-	yield(get_tree().create_timer(.3), "timeout")
-	remove_matches()
-	yield(get_tree().create_timer(.2), "timeout")
-	collapse_columns()
+	#yield(get_tree().create_timer(.3), "timeout")
+	yield(remove_matches(), "completed")
+	#yield(get_tree().create_timer(.2), "timeout")
+	yield(collapse_columns(), "completed")
 	
 
 # swaps 2 tiles in the render tree	
@@ -134,11 +136,9 @@ func swap_tiles(tile_a, tile_b):
 	# allow each tile to move themselves
 	tile_a.set_index(index_b)
 	tile_b.set_index(index_a)
-	yield(get_tree().create_timer(.2), "timeout")
+	yield(get_tree().create_timer(tile_a.tween_speed), "timeout")
 	var a_has_matches = tile_a.find_matches()
 	var b_has_matches = tile_b.find_matches()
-	# wait for the movement tweens to finish
-	#yield(get_tree().create_timer(.2), "timeout")
 	
 	# if no matches were made - move them back
 	if !a_has_matches and !b_has_matches:
@@ -148,11 +148,11 @@ func swap_tiles(tile_a, tile_b):
 		tile_a.set_index(index_a)
 		tile_b.set_index(index_b)
 	else:
-		clean_grid()
-		yield(get_tree().create_timer(1), "timeout")
+		yield(clean_grid(), "completed")
+		#yield(get_tree().create_timer(2), "timeout")
 		while match_whole_grid():
-			clean_grid()
-			yield(get_tree().create_timer(1), "timeout")
+			yield(clean_grid(), "completed")
+			#yield(get_tree().create_timer(2), "timeout")
 	
 	state = states.ready
 	
@@ -225,20 +225,27 @@ func touch_input():
 
 
 func remove_matches():
+	print('remove.start')
+	yield(get_tree().create_timer(.2), "timeout")
 	for tile_index in range(0, grid_tiles.size()):
 		var tile = grid_tiles[tile_index]
 		if tile != null && tile.isMatched:
 			grid_tiles[tile_index] = null
 			remove_child(tile)
 			tile.queue_free()
+	print('remove.end')
 			
 			
 func refill_column(matched_tiles, col_start_index, distance):
+	print('refill.start')
 	for matched_iter in range(0, matched_tiles.size()):
 		var index = col_start_index + (matched_iter * distance)
 		create_tile(index, true)
+	print('refill.end')
+	
 			
 func collapse_columns():
+	print('collapse_col.start')
 	for col in cols:
 		var start_index = col
 		var cur_index = col
@@ -256,15 +263,15 @@ func collapse_columns():
 						var new_index = unmatched_tile.index + move_offset
 						grid_tiles[new_index] = unmatched_tile
 						unmatched_tile.set_index(new_index)
-
-					#for matched_iter in range(0, matched_tiles.size()):
-					#	var index = start_index + (matched_iter * distance)
-					#	create_tile(index, true)
+					#yield(get_tree().create_timer(tile.tween_speed), "timeout")
 					refill_column(matched_tiles, start_index, distance)
+					
 					break;
 			else:
 				matched_tiles.append(tile)
 			cur_index += distance
+	yield(get_tree().create_timer(.5), "timeout")
+	print('collapse_col.end')
 
 
 func size_and_position():
