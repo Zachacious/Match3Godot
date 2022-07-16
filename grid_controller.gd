@@ -267,9 +267,23 @@ func collapse_columns():
 			cur_index += distance
 
 
+func size_and_position():
+	var screen_w = get_viewport().size.x
+	var screen_h = get_viewport().size.y
+	var scale_factor = 1
+	
+	if screen_w < 600:
+		scale_factor = screen_w / 600
+		scale = Vector2(scale_factor, scale_factor)
+		
+	position.x = screen_w/2 - (width*scale_factor)/2
+	position.y = screen_h/2 - (height*scale_factor)/2
+	
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	connect("subplanted_tile_created", self, "_on_subplanted_tile_created")
+	get_tree().get_root().connect("size_changed", self, "size_and_position")
 	# The grid is already center positioned on the screen
 	# we need to offset it with the size of the created grid
 	position.x -= width/2
