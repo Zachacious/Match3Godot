@@ -29,6 +29,12 @@ var final_tile = -1
 
 var grid_tiles = []
 
+enum states {
+	ready, waiting
+}
+
+var state = states.ready
+
 func match_whole_grid():
 	for tile in grid_tiles:
 		if tile == null: continue
@@ -117,6 +123,7 @@ func clean_grid():
 # swaps 2 tiles in the render tree	
 func swap_tiles(tile_a, tile_b):
 	if tile_a == null or tile_b == null: return
+	state = states.waiting
 	# cache current indicies
 	var index_a = tile_a.index
 	var index_b = tile_b.index
@@ -145,6 +152,8 @@ func swap_tiles(tile_a, tile_b):
 		while match_whole_grid():
 			clean_grid()
 			yield(get_tree().create_timer(1), "timeout")
+	
+	state = states.ready
 	
 	
 # converts coords from full viewport space into grid space
@@ -229,8 +238,6 @@ func refill_column(matched_tiles, col_start_index, distance):
 		create_tile(index, true)
 			
 func collapse_columns():
-	var animation_delay = 0
-	
 	for col in cols:
 		var start_index = col
 		var cur_index = col
@@ -238,7 +245,7 @@ func collapse_columns():
 		# we need to store each tile as we go down
 		var unmatched_tiles = []
 		var matched_tiles = []
-		for cell in rows+1:
+		for cell in rows + 1:
 			var tile = 0 if cur_index >= total_tiles else grid_tiles[cur_index]
 			if tile != null:
 				if matched_tiles.size() == 0: unmatched_tiles.append(tile)
@@ -271,4 +278,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	touch_input()
+	if state == states.ready: touch_input()
