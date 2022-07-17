@@ -1,14 +1,0 @@
-Dicier is available under the Creative Commons Attribution 4.0 International license, or CC BY 4.0. You can find the simple and full license terms at the following url: https://creativecommons.org/licenses/by/4.0/ , or in the rest of this document.
-
-For more information about Dicier, including the Dicier User Guide, see https://SpeakTheSky.itch.io/typeface-dicier .
-
--
-
-SECTION 1: WHAT YOU CAN DO WITH DICIER. As long as you follow the license conditions in section 2: 	1. You can freely copy and redistribute Dicier in any medium for personal and commercial projects, and 	2. you can freely remix, transform, and build on Dicier for personal and commercial projects.
- Personal and commercial projects include, but are not limited to: 	• Embedding part or all of Dicier into a .pdf, .epub, or .html file (most apps that can export .pdfs will embed fonts automatically during export). 	• Modifying Dicier’s font files directly using a typeface design app. 	• Bundling Dicier’s license (“Dicier license.txt”) and any of its font files with a template.
-
--
-
-SECTION 2: WHAT YOU HAVE TO DO TO USE DICIER. 	1. You must give appropriate credit, by providing: 		• the designer’s name (Speak the Sky), 		• the license type (CC BY 4.0) and a link to its text (https://creativecommons.org/licenses/by/4.0/), and 		• optionally (but preferably), a link to the typeface (https://speakthesky.itch.io/typeface-dicier). 	2. You must indicate what changes were made, if any, and keep a record of previous changes. 	3. You may not apply any legal terms or technological measures to restrict others from doing anything the license permits. 	4. You may not suggest that the licensor endorses you or your use of the licensed work.
- Example 1: You modify the font files, then pass them on to a third party who also modifies them. You must keep a record of the modifications you make, then pass on the record to the third party. The third party must add their own modifications to the record as well, then pass the expanded record on with the files if they transfer them to another party.
- Example 2: You use Dicier when laying out a game. Somewhere in the game’s credits section, colophon, etc., you must include appropriate credit. For example (with hyperlinks to the typeface and license in “Dicier” and “CC BY 4.0”): Dicier (https://speakthesky.itch.io/typeface-dicier), by Speak the Sky, licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
