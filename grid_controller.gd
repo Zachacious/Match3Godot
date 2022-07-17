@@ -149,10 +149,8 @@ func swap_tiles(tile_a, tile_b):
 		tile_b.set_index(index_b)
 	else:
 		yield(clean_grid(), "completed")
-		#yield(get_tree().create_timer(2), "timeout")
 		while match_whole_grid():
 			yield(clean_grid(), "completed")
-			#yield(get_tree().create_timer(2), "timeout")
 	
 	state = states.ready
 	
@@ -238,10 +236,13 @@ func remove_matches():
 			
 func refill_column(matched_tiles, col_start_index, distance):
 	print('refill.start')
+	var indicies = []
 	for matched_iter in range(0, matched_tiles.size()):
 		var index = col_start_index + (matched_iter * distance)
 		create_tile(index, true)
+		indicies.append(grid_tiles[index])
 	print('refill.end')
+	return indicies
 	
 			
 func collapse_columns():
@@ -263,10 +264,13 @@ func collapse_columns():
 						var new_index = unmatched_tile.index + move_offset
 						grid_tiles[new_index] = unmatched_tile
 						unmatched_tile.set_index(new_index)
-					#yield(get_tree().create_timer(tile.tween_speed), "timeout")
-					refill_column(matched_tiles, start_index, distance)
 					
-					break;
+					print(start_index, ', ', unmatched_tiles.size())
+					var filled_tiles = refill_column(matched_tiles, start_index, distance)
+					matched_tiles.clear()
+					unmatched_tiles.append(tile)
+					unmatched_tiles.append_array(filled_tiles)
+					#break;
 			else:
 				matched_tiles.append(tile)
 			cur_index += distance
