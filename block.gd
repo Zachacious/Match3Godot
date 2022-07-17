@@ -7,7 +7,8 @@ export var tween_speed = 0.35
 
 onready var sprite = $sprite
 onready var move_tween = $move_tween
-
+onready var destroy_animation = $destroy/AnimationPlayer
+onready var destroy_sprite = $destroy
 
 onready var isMatched = false
 onready var direction_deltas = {
@@ -26,7 +27,7 @@ var ready_for_deletion = false
 func move(target):
 	move_tween.stop_all()
 	move_tween.interpolate_property(self, "position", position, target,\
-	 tween_speed, Tween.TRANS_BACK, Tween.EASE_OUT)
+	 tween_speed, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	move_tween.start()
 	
 	
@@ -110,6 +111,11 @@ func find_matches():
 # temporary
 func dim(): sprite.modulate = Color(1,1,1,0.3)	
 
+func destroy():
+	sprite.modulate = Color(1,1,1,0)
+	destroy_sprite.modulate = Color(1,1,1,1)
+	destroy_animation.play("destroy")	
+
 # regenerate texture
 func regen_texture():
 	# choose a texture at random and apply to sprite
@@ -125,6 +131,8 @@ func _ready():
 
 	regen_texture()
 	
+	destroy_sprite.modulate = Color(1,1,1,0)
+	
 	# set grid position for the global
 	# lookup table
 	if !Globals.grid.coords.has(index): 
@@ -133,5 +141,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if ready_for_deletion: queue_free() # delete this from the tree
-	if isMatched: dim()
+	#if ready_for_deletion: queue_free() # delete this from the tree
+	if isMatched: destroy()
