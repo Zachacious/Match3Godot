@@ -37,7 +37,9 @@ position = Vector2( 114, 945 )
 scale = Vector2( 0.411082, 0.411082 )
 texture = ExtResource( 3 )
 
-[node name="Label" type="Label" parent="Control/Moves"]
+[node name="label_node" type="Node2D" parent="Control/Moves"]
+
+[node name="Label" type="Label" parent="Control/Moves/label_node"]
 margin_left = -146.0
 margin_top = -61.0
 margin_right = 146.0
@@ -55,3 +57,5 @@ margin_bottom = 1000.0
 custom_fonts/font = SubResource( 2 )
 text = "Get the highest score you can in 20 moves"
 autowrap = true
+
+[node name="tween" type="Tween" parent="Control"]

@@ -1,6 +1,7 @@
 extends Node
 
 signal score_set
+signal moves_set
 
 var grid = {
 	'index_positions': {},
@@ -8,14 +9,7 @@ var grid = {
 }
 
 var score = 0
-
-#var blocks =  [
-#	{'name':'red', 'texture': preload("res://sprites/red.png")},
-#	{'name':'blue', 'texture':preload("res://sprites/blue.png")},
-#	{'name':'green', 'texture':preload("res://sprites/green.png")},
-#	{'name':'magenta', 'texture':preload("res://sprites/magenta.png")},
-#	{'name':'seaweed','texture':preload("res://sprites/seaweed.png")},
-#]
+var moves = 20
 
 var blocks =  [
 	{'name':'cat', 'texture': preload("res://sprites/monsters/cat.png")},
@@ -25,10 +19,13 @@ var blocks =  [
 	{'name':'rabbit','texture':preload("res://sprites/monsters/rabbit.png")},
 ]
 
-var tile_tween = null
-
+#var tile_tween = null
 
 func set_score(value):
 	print('SET_SCORE ', value)
 	score = value
 	emit_signal('score_set')
+	
+func dec_moves():
+	moves -= 1
+	emit_signal('moves_set')

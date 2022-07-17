@@ -31,7 +31,7 @@ var parent
 func move(target):
 	move_tween.stop_all()
 	move_tween.interpolate_property(self, "position", position, target,\
-	 tween_speed, Tween.TRANS_BACK, Tween.EASE_OUT)
+	 tween_speed, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	move_tween.start()
 	
 	

@@ -126,6 +126,7 @@ func clean_grid():
 # swaps 2 tiles in the render tree	
 func swap_tiles(tile_a, tile_b):
 	if tile_a == null or tile_b == null: return
+	if tile_a == tile_b: return
 	state = states.waiting
 	# cache current indicies
 	var index_a = tile_a.index
@@ -141,6 +142,8 @@ func swap_tiles(tile_a, tile_b):
 	yield(get_tree().create_timer(tile_a.tween_speed), "timeout")
 	var a_has_matches = tile_a.find_matches()
 	var b_has_matches = tile_b.find_matches()
+	
+	Globals.dec_moves()
 	
 	# if no matches were made - move them back
 	if !a_has_matches and !b_has_matches:
