@@ -1,9 +1,13 @@
 extends Node
 
+signal score_set
+
 var grid = {
 	'index_positions': {},
 	'coords': {}
 }
+
+var score = 0
 
 #var blocks =  [
 #	{'name':'red', 'texture': preload("res://sprites/red.png")},
@@ -22,3 +26,9 @@ var blocks =  [
 ]
 
 var tile_tween = null
+
+
+func set_score(value):
+	print('SET_SCORE ', value)
+	score = value
+	emit_signal('score_set')

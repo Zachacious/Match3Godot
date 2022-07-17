@@ -4,6 +4,7 @@ extends Node2D
 export var index = 0
 export var texture_index = 0
 export var tween_speed = 0.35
+export var points_value = 100
 
 onready var sprite = $sprite
 onready var move_tween = $move_tween
@@ -21,7 +22,8 @@ onready var direction_deltas = {
 # caching the parent - set in ready
 var parent
 
-var ready_for_deletion = false
+# var ready_for_deletion = false
+
 
 # tween position changes
 func move(target):

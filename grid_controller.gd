@@ -224,13 +224,16 @@ func touch_input():
 
 func remove_matches():
 	print('remove.start')
+	var points = 0
 	yield(get_tree().create_timer(.2), "timeout")
 	for tile_index in range(0, grid_tiles.size()):
 		var tile = grid_tiles[tile_index]
 		if tile != null && tile.isMatched:
+			points += tile.points_value
 			grid_tiles[tile_index] = null
 			remove_child(tile)
 			tile.queue_free()
+	Globals.set_score(Globals.score + points)
 	print('remove.end')
 			
 			

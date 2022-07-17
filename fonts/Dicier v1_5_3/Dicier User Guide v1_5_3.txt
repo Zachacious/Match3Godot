@@ -1,0 +1,1776 @@
+=================
+DICIER USER GUIDE
+=================
+
+Title: Dicier User Guide.
+Subtitle: the user guide for Dicier, an advanced and accessible analog games typeface.
+Version: 1.5.2.
+Designer: Speak the Sky.
+
+
+
+
+
+==============================
+=====CONTENTS.
+
+SECTION 0: README.
+	0 1: The License.
+	0 1 1: Cliff notes version.
+	0 1 2: Creative Commons Attribution 4.0.
+	0 1 3: What you can do with Dicier.
+	0 1 4: What you have to do to use Dicier.
+	0 2: Troubleshooting Dicier
+	0 2 1: Codes not working in MS Office.
+	0 2 2: Translated wildcard die or joker fails.
+	0 3: Credits. 	0 3 1: Typeface design.
+	0 3 2: Translation credits.
+	0 4: Version History.
+
+SECTION 1: INTRODUCTION.
+	1 1: What is Dicier?
+	1 1 1: Dicier is an analog game typeface!
+	1 1 2: Dicier is open to your feedback!
+	1 2: About this Guide.
+	1 2 1: Terms: glyphs, icons, and codes.
+
+SECTION 2: HOW TO USE DICIER.
+	2 1: Setup.
+	2 1 1: Installing Dicier.
+	2 1 2: Upgrading Dicier.
+	2 2: Building Blocks.
+	2 2 1: The alphabet and the underscore.
+	2 3: Building Dicier’s Codes. 	2 3 1: Simple codes.
+	2 3 2: Complex codes.
+	2 3 3: Idiosyncracies of Dicier's codes.
+	2 4: Accessibility. 	2 4 1: Using Dicier in an accessible way.
+	2 5: Customising Dicier.
+	2 5 1: Modes.
+	2 5 2: Weights.
+	2 6: Dicier Webfonts.
+	2 6 1: Files.
+	2 6 2: CSS for Dicier.
+
+SECTION 3: CODES.
+	3 1: Dice.
+	3 1 1: Dice overview. 	3 1 2: Numbered dice.
+	3 1 3: Fudge dice.
+	3 1 4: Yes, No, And, But... dice.
+	3 1 5: Dice shapes.
+	3 1 6: Dice results. 	3 1 7: Taoist trigram dice.
+	3 1 8: Other symbol dice.
+	3 1 9: Even and odd dice.
+	3 2: Dominoes. 	3 2 1: Dominoes overview. 	3 2 2: Numbered dominoes.
+	3 2 3: Wildcard dominos.
+	3 3: Playing cards.
+	3 3 1: Playing cards overview. 	3 3 2: Card values. 	3 3 3: Card suits.
+	3 3 4: Jokers.
+	3 3 5: Card value and suit combinations.
+	3 3 6: Season suits.
+	3 3 7: Uncommon historical suits.
+	3 3 8: Tarot minor arcana.
+	3 3 9: Heckadeck.
+	3 4: Other Randomisers.
+	3 4 1: Coins.
+	3 4 2: Zener cards.
+	3 4 3: Rock-paper-scissors.
+	3 4 4: Dreidel.
+
+SECTION 4: ADVANCED FEATURES.
+	4 1: OpenType Overview.
+	4 1 1: What is OpenType? 	4 1 2: Which OT features does Dicier have?
+	4 2: How to Activate OT Features. 	4 2 1: ...in Affinity.
+	4 2 2: ...in LibreOffice.
+	4 2 3: ...in MS Office.
+	4 2 4: ...in Scribus.
+	4 2 5: ...in Apple Pages and TextEdit.
+	4 3: Deeper Customisation. 	4 3 1: Numbers and Wildcards (ss01 to ss11).
+	4 3 2: Number Styles.
+	4 3 3: Chinese dominoes.
+	4 3 4: Backgammon doubling cube.
+	4 3 5: Wildcard Styles.
+	4 3 6: d4, d8, d10, d12 and d20 dice (ss12 to ss16).
+	4 3 7: Barrel dice (ss17 to ss18).
+	4 3 7 1: d100 double-digit d10/barrel dice.
+	4 3 8: Mixing pip patterns (cv01 to cv09).
+	4 3 9: Poker dice (cv10 to cv12).
+	4 3 10: Triangular 3-pip patterns (cv13).
+	4 3 11: Blank-zero numerals (cv14).
+	4 3 12: Larger 1-pip on Asian dice (cv15).
+	4 3 13: Rotated 6-, 7-, 8-, 2-, and 3-pip (cv16-20).
+	4 3 14: Dotless Arabic numerals 6 and 9 (cv21).
+	4 3 15: Pentacle-shaped coins (cv22).
+	4 3 16: Swap staves/staffs and batons (cv23).
+	4 3 17: Dice size indicators (cv24).
+	4 3 18: Dice-less Taoist trigrams (cv25).
+	4 3 19: Dice-less pips (cv26).
+	4 3 20: 100-on-d100 d10 and barrel dice (cv28).
+	4 3 21: Crown jewels (cv29).
+	4 3 22: Circled star joker (cv30).
+	4 3 23: Pipped d12 (cv31).
+	4 3 24: Dreidel handles (cv32).
+	4 3 25: d2 (cv33-36).
+	4 3 26: Rock-paper-scissors gestures (cv37).
+	4 3 27: Reversed rock-paper-scissors (cv38).
+	4 3 28: Crossed swords (cv39).
+	4 3 29: d100 via d10/barrel dice (cv40).
+	4 3 30: Toggle open and slashed 0 (zero).
+	4 4: Limited features in Dicier Pixel.
+
+SECTION 5: TRANSLATIONS.
+	5 1: Français.
+	5 1 1: Dé.
+	5 1 2: Dominos.
+	5 1 3: Cartes à joeur.
+	5 1 4: Autres.
+	5 2: Español.
+	5 2 1: Dado.
+	5 2 2: Dominó.
+	5 2 3: Jugando a las cartas.
+	5 2 4: Otros.
+	5 3: Galego.
+	5 3 1: Dado.
+	5 3 2: Dominó.
+	5 3 3: Xoganda ás cartas.
+	5 3 4: Outros.
+	5 4: Književni Hrvatski.
+	5 4 1: Kocke.
+	5 4 2: Domine.
+	5 4 3: Kartanje.
+	5 4 4: Drugi.
+	5 5: Português.
+	5 5 1: Dados.
+	5 5 2: Dominó.
+	5 5 1: Cartas de Jogar.
+	5 5 4: Outros.
+
+SECTION 6: CONTACT.
+
+
+
+
+
+==============================
+=====SECTION 0: README.
+
+------------------------------
+-----0 1: The License.
+
+----------
+---0 1 1: Cliff notes version 	• Dicier’s available under the CC BY 4.0 license, so: 	• You can freely use it, even in commercial products... 	• ...as long as you credit Speak the Sky as its designer. Within reason, I mean. If you’re making e.g. a business card game then don’t worry about the credit. Here’s how credit could look: Dicier, by Speak the Sky, licensed under CC BY 4.0.
+ If you’re doing anything complicated (like editing the font files) then check out sections 0 1 3 and 0 1 4.
+
+This license only applies to fonts within the family ‘Dicier’. Other versions, such as commissions in the family DicierX, have their own, individual licenses (and are generally not available to the public).
+
+
+----------
+---0 1 2: Creative Commons Attribution 4.0.
+
+Dicier is available under the Creative Commons Attribution 4.0 International license, or CC BY 4.0. The rest of section 0 1 explains the license terms, though you can find the simple and full license terms at the following url: https://creativecommons.org/licenses/by/4.0/ .
+
+
+----------
+---0 1 3: What you can do with Dicier.
+ As long as you follow the license conditions in section 0 1 4: 	1. You can freely copy and redistribute Dicier in any medium for personal and commercial projects, and 	2. you can freely remix, transform, and build on Dicier for personal and commercial projects.
+ Personal and commercial projects include, but are not limited to: 	• Embedding part or all of Dicier into a .pdf (most apps that can export .pdfs will embed fonts automatically). 	• Including Dicier in a .epub or .mobi e-book, or website. 	• Modifying Dicier’s font files directly using a typeface design app. 	• Bundling Dicier’s license (“Dicier license.txt”) and any of its font files with a template (e.g. the Mini-zine (https://speakthesky.itch.io/mini-zine-template-pack) or Trifold (https://speakthesky.itch.io/trifold-template-pack) Template Packs by Speak the Sky). You could also give a url to download Dicier rather than bundling the files with your templates (so you won’t have to update your templates with Dicier updates).
+
+
+----------
+---0 1 4: What you have to do to use Dicier.
+ 	1. You must give appropriate credit, by providing: 		• the designer’s name (Speak the Sky), 		• the license type (CC BY 4.0) and a link to its text (https://creativecommons.org/licenses/by/4.0/), and 		• optionally (but preferably), a link to the typeface (https://speakthesky.itch.io/typeface-dicier). 	2. You must indicate what changes were made, if any, and keep a record of previous changes. 	3. You may not apply any legal terms or technological measures to restrict others from doing anything the license permits. 	4. You may not suggest that the licensor endorses you or your use of the licensed work.
+ Example 1: You modify the font files, then pass them on to a third party who also modifies them. You must keep a record of the modifications you make, then pass on the record to the third party. The third party must add their own modifications to the record as well, then pass the expanded record on with the files if they transfer them to another party.
+ Example 2: You use Dicier when laying out a game. You must include appropriate credit in the credits section (within reason for the game’s size, e.g. I’m not bothered if you don’t add a credit on a business card game). For example: Dicier (https://speakthesky.itch.io/typeface-dicier), by Speak the Sky, licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+
+
+------------------------------
+-----0 2: Troubleshooting Dicier
+
+----------
+---0 2 1: Codes not working in MS Office.
+
+If you’re using Microsoft Office apps like MS Word or Powerpoint and the only codes that work for you are pipped dice, try going to the ‘Advanced’ font features tab mentioned in SECTION 4 2 3: ...IN MS OFFICE and activating ‘standard ligatures’ and ‘contextual alternates’. These settings should be on by default, but are off in MS Office.
+
+
+----------
+---0 2 2: Translated wildcard die or joker fails.
+
+For currently-unknown reasons, some translated wildcard dice results (e.g. D6_TOUT, D8_ALGUNO) don’t combine correctly in exported .pdf files in some cases. This affects French, Spanish, Galician, and Portuguese (which have die first, wildcard second). It may only occur in Affinity Publisher (the software used to lay out this file) or even in the specific .afpub file for the guide.
+
+This problem affects the following codes:
+D2_TOUT, D4_TOUT, D6_TOUT, etc.
+D2_ALGUNO, D4_ALGUNO, D6_ALGUNO, etc.
+D2_ALGUN, D4_ALGUN, D6_ALGUN, etc.
+D2_ALGÚN, D4_ALGÚN, D6_ALGÚN, etc.
+D2_ALGUMA, D4_ALGUMA, D6_ALGUMA, etc.
+
+It has also been seen to affect some Portuguese coloured joker codes:
+JOKER_VERMELHO.
+JOKER_NEGRO.
+
+The temporary fix is to include any affected codes earlier in the file, which causes the icons to display correctly throughout the file.
+
+
+------------------------------
+-----0 3: Credits.
+
+---------- ---0 3 1: Typeface design.
+ Dicier is designed by Speak the Sky and was made using the Glyphs app.
+
+
+----------
+---0 3 2: Translation credits.
+
+French by themoonisacheese, Acccent, and angela quidam.
+Spanish by gabichete.
+Galician by gabichete.
+Croatian (standard) by Ordoalea Publishing.
+Portuguese (Brazilian) by Leonardo Andrade (additional notes for Portuguese (European) by hobbito do Shire).
+
+
+------------------------------
+-----0 4: Version History.
+
+2021-11-15: v1.5.3.
+	• added webfont files (.woff and .woff2).
+	• edited the User Guide to account for these changes.
+	• fixed faulty vertical metric bug in .otf files.
+
+2021-07-27: v1.5.2.
+	• added d100 double-digit d10/barrel dice (ss14, 17, 18).
+	• added d10 and horizontal barrel 100-on-d100 (cv28).
+	• added d100 via d10/barrel dice (cv40).
+	• edited the User Guide to account for these changes.
+	• made other adjustments to the User Guide.
+
+2021-07-05: v1.5.1.
+	• added crossed swords (cv39).
+	• edited the User Guide to account for this change.
+
+2021-06-28: v1.5.
+	• added Eagles suit.
+	• added Spring, Summer, Autumn, and Winter suits.
+	• added pipped d12 (cv31).
+	• added dreidel handles (cv32).
+	• added d2 (cv33-36).
+	• added rock-paper-scissors.
+	• added rock-paper-scissors gestures (cv37).
+	• added reversed rock-paper-scissors (cv38).
+	• added esoteric coinflip outcomes.
+	• adjusted triangular 3-pip patterns (cv13).
+	• edited the User Guide to account for these changes.
+
+2021-06-07: v1.4.
+	• added generic barrel and horizontal barrel.
+	• added even- and odd-result dice.
+	• added crown, anchor, ancre, and soleil.
+	• added ‘crown jewels’-style crown (cv29).
+	• changed default joker icon to jester face.
+	• rewrote joker code structure.
+	• changed _VERMELL joker colour code to VERMELLO.
+	• added circled star joker icon variant (cv30).
+	• redesigned joker colour icons.
+	• adjusted coloured arrow and talisman icons.
+	• changed coloured talisman codes.
+	• repositioned wands/rods icons on dice.
+	• shrank Arabic numerals on dice (ss06-ss08).
+	• redesigned d4, d8, d10, d12, d20, and vertical barrel.
+	• simplified backgammon doubling cube.
+	• redesigned O and Q in Pixel Mode.
+	• fixed 20_ON_D20 translations.
+	• fixed ALGÚN slashed zero domino OT code.
+	• added metadata (license and text samples).
+	• added new Translation: Portuguese.
+	• edited the User Guide to account for these changes.
+	• made other adjustments to the User Guide.
+
+2021-05-25: v1.3.1.
+	• fixed 20_ON_D20.
+	• corrected v1.3 release date in Version History.
+
+2021-05-10: v1.3.
+	• added d4, d8, d10, d12, and 20 dice (ss12-16).
+	• added vertical and horizontal barrel dice (ss17-18).
+	• added Taoist trigram dice.
+	• added dice size indicators (cv24).
+	• added diceless Taoist trigrams (cv25).
+	• removed diceless pip codes.
+	• added diceless pips (cv26).
+	• removed backgammon doubling cube codes.
+	• added backgammon doubling cube (cv27).
+	• added 100-on-d100 vertical barrel dice (cv28).
+	• Arabic numerals 6 and 9 are now dotless by default.
+	• cv21 now adds dots to Arabic numerals 6 and 9.
+	• shrank numbers in Arabic numeral style (ss06-08).
+	• reduced width of d6 and dreidel icons to be square.
+	• adjusted European dominoes to be square per half.
+	• redesigned Arabic numeral 1 in Flat and Round Modes.
+	• redesigned 5-, 7-, 8-pip Asian dice in Block Mode.
+	• redesigned triangular 3-pip Asian die in Block Mode.
+	• added notes about limited OT support in MS Office.
+	• added new Translation: Croatian (standard).
+	• added Troubleshooting section to Chapter 0.
+	• edited the User Guide to account for these changes.
+	• made other adjustments to the User Guide.
+
+2021-04-19: v1.2.
+	• added tarot minor arcana suits and card values.
+	• added Heckadeck icons.
+	• added Zener card symbols.
+	• added dreidel.
+	• added Crowns, Anchors, Castles, and Leaves suits.
+	• added rotated 6, 7, 8, 2, and 3-pip dice (cv16-20).
+	• added dotless Arabic numerals 6 and 9 (cv21).
+	• added pentacle-shaped coins (cv22).
+	• added stave-shaped batons and vice versa (cv23).
+	• added slashed and unslashed zeroes (zero).
+	• added new Translations: Spanish, Galician, Croatian.
+	• fixed French Translation of stylistic set 07.
+	• edited the User Guide to account for these changes.
+	• made other adjustments to the User Guide.
+
+2021-03-22: v1.1.
+	• switched to using standard (automatic) ligatures.
+	• added generic die, domino, and coin codes. 	• added d6 results codes.
+	• added alternate double-wildcard domino code. 	• added dice-less pips/dots. 	• added Stars, Bullets, and Crosses historic suits. 	• added backgammon doubling cube. 	• added poker dice (cv10-12). 	• added triangular 3-pip patterns on dice (cv13). 	• added blank-zero dice and dominoes (cv14).
+	• added larger 1-pip on Asian dice (cv15). 	• added new Mode: Dicier Block. 	• added new Translation: French.
+	• adjusted Chinese domino design.
+	• adjusted kerning for all guide-letter pairs.
+	• adjusted Heavy stroke positions. 	• adjusted Heavy and Dark weight joker stroke widths.
+	• edited the User Guide to account for these changes.
+	• added instructions for Scribus, pages, and TextEdit. 	• made other minor changes to User Guide.
+ 2021-02-22: v1.0. 	• Dicier v1.0 is released in English.
+
+
+
+
+
+==============================
+=====SECTION 1: INTRODUCTION.
+
+------------------------------
+-----1 1: What is Dicier?
+
+----------
+---1 1 1: Dicier is an analog game typeface!
+
+It's designed for putting icons for analog game tools (like dice and playing cards) in-line with text, in tables, and in lists—and, really, in any other way you want. It converts regular text into useful icons, while keeping the text underneath, similarly to alt-text.
+
+
+----------
+---1 1 2: Dicier is open to your feedback!
+
+Check out Dicier’s itch forum (https://speakthesky.itch.io/typeface-dicier/community), particularly: 	• the Issues & Fixes thread (for reporting bugs), 	• the Translating Dicier thread (for translating codes out of English), and 	• the Request a Feature thread.
+
+
+------------------------------
+-----1 2: About this Guide.
+
+----------
+---1 2 1: Terms: glyphs, icons, and codes.
+ You’ll see the word ‘glyph’ sometimes in this guide. In typefaces, a glyph is more-or-less any character aside from empty spaces. The letter ‘A’, the number ‘1’, and the period after this sentence are glyphs. So’s everything in this guide. Everything you can type with Dicier is a glyph, except the spaces.
+ You’ll also see the word ‘icon’ as well. In this guide, icons are Dicier’s output—glyphs for dice etc. Not all of Dicier’s glyphs are icons—only those meant to be used in analog games texts.
+ You’ll see the word ‘code’, too. These are numbers, words, and phrases you can use to turn Dicier’s non-icon glyphs into icons.
+ This guide has a lot of ‘glyph lists’ that list glyphs with their numbers, letters, or codes beneath. For example:
+
+Icon: die with the words 'Yes, and'.
+Code: Y E S underscore A N D.
+
+
+
+
+
+==============================
+=====SECTION 2: HOW TO USE DICIER.
+
+------------------------------
+-----2 1: Setup
+
+----------
+---2 1 1: Installing Dicier.
+ To install Dicier for desktop computer use, double-click the .otf files for the fonts you want to install and follow the instructions given by your operating system to complete the installation.
+ ----------
+---2 1 2: Upgrading Dicier.
+ For best results when upgrading from one version of Dicier to another (e.g. v1.0 to v1.1), follow these steps: 	1. Save any open work that includes Dicier. 	2. Close those files and apps. 	3. Uninstall the previous version of Dicier: 		• If using Windows, you can find these in the Settings menu under Personalization, then Fonts. Find Dicier and click the ‘Uninstall’ button in the font’s details. 		• If using MacOS, you can find these in the Font Book app. Find Dicier in the ‘All Fonts’ or ‘User’ list, then right-click and choose ‘Remove “Dicier” Family’. 	4. Install the new version of Dicier as explained in section 2 1 1.
+ Uninstalling the old version stops it blocking the new installation and saving and closing any apps using Dicier stops the uninstall process from affecting any formatting in those files.
+
+
+------------------------------
+-----2 2: Building Blocks
+
+----------
+---2 2 1: The alphabet and the underscore.
+
+Dicier includes uppercase Latin letters (A to Z and others) and the underscore. These appear as a guide when you type out Dicier's codes. New letters (and even entire scripts) will be added to support new translations.
+
+Letters currently in Dicier: A, Á (A-acute), Ã (A-tilde), B, C, Ç (C cedilla), Ć (C-acute), Č (C-caron), D, E, È (E-grave), É (E-acute), Ê (E-circumflex), F, G, H, I, Í (I-acute), J, K, L, M, N, Ñ (N-tilde), O, Ó (O-acute), Œ (O E ligature), P, Q, R, S, Š (S-caron), T, U, Ú (U-acute), V, W, X, Y, Z, Ž (Z-caron).
+
+Dicier currently includes Hebrew letters as alternative codes for some dreidel icons.
+
+
+------------------------------
+-----2 3: Building Dicier’s Codes.
+
+---------- ---2 3 1: Simple codes.
+ The simplest codes in Dicier are just one number: the numbers 1 to 9 and 0 (made using the numeral keys) (excluding dreidel letter codes). These produce a die face with the corresponding number of pips.
+ Because the underlying text is ordinary numerals, the numbered dice icons can easily be used in custom numbered lists, including in multi-layered lists.
+
+
+----------
+---2 3 2: Complex codes.
+ All the remaining codes in Dicier use more than one character—but they all describe their icons fairly well. For example:
+
+Icon: die with the word 'No'.
+Code: N O. NO.
+
+Icon: domino with 1 pip on left and 7 pips on right.
+Code: 1 underscore 7. 1_7.
+ Icon: coin showing heads.
+Code: H E A D S. HEADS.
+ Icon: uppercase Q and diamonds suit symbol.
+Code: Q U E E N underscore D I A M O N D S. QUEEN_DIAMONDS.
+ As you type a code, you’ll see the guide letters appear one by one until the code is complete and the font swaps them out for the icon.
+
+Note: If you're using MS Office, see SECTION 4 2 3: ...IN MS OFFICE and activate 'standard ligatures' and 'contextual alternates' to enable Dicier's basic functions.
+ Some codes use characters found in other, shorter codes, e.g. dominoes (e.g. 3 underscore 4) use the same characters as numbered dice (e.g. 3, 4). As you type out a code, you may see icons of shorter code(s) appear and be over-written.
+ You could also type out the codes in another font, then change to Dicier to transform them into their icons. How you get from codes to icons is up to you!
+
+
+----------
+---2 3 3: Idiosyncracies of Dicier's codes.
+
+Underscores are mostly used as spaces, but very occasionally they distinguish codes that are otherwise identical, or one letter long (excluding dreidel letter codes). For example:
+
+Icon: die with the word 'mais', French for 'but'.
+Code: M A I S. MAIS.
+
+Icon: die with plus sign.
+Code: M A I S underscore. MAIS_. (note: this is technically the incorrect spelling, see next table).
+
+Icon: die with the word 'y', Spanish for 'and'.
+Code: Y underscore. Y_.
+
+Icon: die with the word 'e', Galician for 'and'.
+Code: E underscore. E_.
+
+Dicier includes diacritics, and any code with diacritics has a version without them. For example:
+
+Icon: die with plus sign.
+Code 1: M A-acute I S. MÁIS.
+Code 2: M A I S underscore. MAIS_. (see note in table above).
+
+Icon: circled star.
+Code 1: C O M O D I-acute N. COMODÍN.
+Code 2: C O M O D I N. COMODIN.
+
+Icon: clubs suit symbol.
+Code 1: T R E-grave F L E. TRÈFLE.
+Code 2: T R E F L E. TREFLE.
+
+Icon: die with the word 'sí'.
+Code 1: S I-acute. SÍ.
+Code 2: S I underscore. SI_.
+
+For technical reasons relating to .pdf export from at least one popular layout app, all codes are 8 or fewer characters. Codes longer than 8 characters are combinations of shorter codes, and a few codes are cut short. For example:
+
+Icon: uppercase A and spades suit symbol.
+Code: A C E underscore S P A D E S. ACE_SPADES.
+Part 1: A C E underscore. ACE_.
+Part 2: S P A D E S. SPADES.
+
+Icon: die with hatching (dense diagonal lines).
+Code: A N Y underscore O N underscore D 6. ANY_ON_D6.
+Part 1: A N Y underscore O N underscore. ANY_ON_.
+Part 2: D 6. D6.
+
+Icon: circled pentacle.
+Code: P E N T A C L E. PENTACLE.
+Note: for pentacles.
+
+
+------------------------------
+-----2 4: Accessibility.
+
+---------- ---2 4 1: Using Dicier in an accessible way.
+ Dicier is designed to be accessible to both creators of analog games and users of text-to-speech software. However, as a creator, you have to use it accessibly as well.
+ Always put a space between Dicier codes. This helps text-to-speech (TTS) software read the icons. For example, S I X A C E A N Y T E N 6 3 will produce sight-readable icons for a card six, a card ace, a wildcard die, a card ten, a six-pip die, and a 3-pip die, but the text is “SIXACEANYTEN63”. TTS software may read that as something like “six ass anyton sixty-three”.
+
+Putting punctuation between icons may not help. For example, putting a period between two numbered dice can make TTS software read it as a decimal. Slashes, dashes, and colons may be ignored, treated as pauses, or read aloud.
+
+.pdf isn’t a very TTS-friendly format. It hasn’t fully outgrown its origin as a way to share visual info, so .pdf readers may not recognise spaces (because visually, there’s no difference between a space character and a gap), or underscores (for some reason). This is a problem with .pdf and .pdf readers, not Dicier, but you should be aware of this issue in general.
+
+
+------------------------------
+-----2 5: Customising Dicier.
+
+----------
+---2 5 1: Modes.
+ Dicier has 4 visual Modes that can be selected as font traits in a similar way to bold or italic:
+	• Round, which has rounded corners and stroke caps.
+	• Flat, which is square corners and stroke caps.
+	• Pixel, which has low-resolution pixel icons, but has fewer features due to its low resolution. For a full list, see SECTION 4 4: LIMITED FEATURES IN DICIER PIXEL. 	• Block, which has a grid-like octagonal shape.
+
+
+----------
+---2 5 2: Weights.
+ Dicier has 3 visual Weights that can be selected as font traits in a similar way to bold or italic:
+	• Light, which has thin strokes in some icons.
+	• Heavy, which has thick strokes in some icons.
+	• Dark, which inverts the colour (e.g. die faces are filled in, and pips are clear) and mixes stroke widths from Light and Heavy.
+ The specific strokes affected are: 	• outlines for dice, dominoes, suits, dreidels, and coins. 	• hatching in wildcard dice, dominoes, and coins.
+	• Heckadeck arrows and talismans.
+	• Chinese domino pips and pip patterns.•	
+	• rock-paper-scissors symbols and gestures.
+ You can use different Weights to, for example: 	• distinguish between different types of dice (e.g. first and second dice in a d66 roll); 	• match the weight to your body text font’s weight; or 	• represent red vs black playing card suits.
+ You can use these to, for example, distinguish between different types of dice (e.g. first and second dice in a d66 roll) or match the thickness of the outline to the weight of your body font.
+
+
+------------------------------
+-----2 6: Dicier Webfonts.
+
+----------
+---2 6 1: Files.
+
+Dicier includes webfont (.woff and .woff2) files for reduced file-sizes when using Dicier online or in .epub files. These files are approximately 60% smaller than the full .otf files.
+
+
+----------
+---2 6 2: CSS for Dicier.
+
+First, target your chosen files with @font-face, then activate the following features in your text style: kern (k e r n), liga (l i g a), calt (c a l t). These may be active by default in your browser. For any text using double-digit dice codes (e.g. 13 on a d20), activate dlig (d l i g). Finally, check Chapter 4: Advanced Features for the 4-character names of extra features (e.g. ss01, cv26, zero). Your style code should look something like this:
+
+@font-face {
+font-family: Dicier;
+src: url('/Fonts/Dicier-Round-Heavy.woff2');
+}
+
+.dicier {
+font-family: Dicier, sans-serif;
+font-feature-settings: “liga” 1, “kern” 1, “calt” 1;
+}
+
+This lets your styles use the selected Dicier font (here, Round-Heavy), then defines a class, 'dicier', that uses Round-Heavy with the basic features activated. If Dicier fails to load, the browser will display the underlying Dicier code in a sans-serif font.
+
+For further information, search online for tutorials on CSS in general and @font-face and font settings in particular.
+ 
+
+
+
+==============================
+=====SECTION 3: CODES.
+
+------------------------------
+-----3 1: Dice. 
+----------
+---3 1 1: Dice overview.
+ Dicier includes codes for numbered dice, Yes/And/No/But dice, Fudge dice, and various other die types and symbols, including a wildcard die face. The numbered dice are the only icons that use exactly one character in their codes.
+
+You can adjust some types of dice icon using these OpenType features (see SECTION 4: ADVANCED FEATURES for further information):
+	• number and wildcard styles (ss01-11);
+	• d4, d8, d10, d12, and d20 (ss12-16);
+	• vertical and horizontal barrel dice (ss17-18);
+	• mixing pip patterns (cv01-09);
+	• triangular 3-pip patterns (cv13);
+	• blank-zero numerals (cv14);
+	• larger 1-pip on Asian dice (cv15);
+	• rotated 6-, 7-, 8-, 2-, and 3-pip (cv16-20);
+	• dotted Arabic numerals 6 and 9 (cv21);
+	• dice size indicators (cv24);
+	• dice-less Taoist trigrams (cv25);
+	• dice-less pips (cv26);
+	• 100-on-d100 vertical barrel dice (cv28);
+	• pipped d12 (cv31);
+	• d2 (cv33-36);
+	• toggle open and slashed 0 (zero).
+
+
+---------- ---3 1 2: Numbered dice.
+
+Icon: die face with 0 pips.
+Code: 0.
+
+Icon: die face with 1 pips.
+Code: 1.
+
+Icon: die face with 2 pips.
+Code: 2.
+
+Icon: die face with 3 pips.
+Code: 3.
+
+Icon: die face with 4 pips.
+Code: 4.
+
+Icon: die face with 5 pips.
+Code: 5.
+
+Icon: die face with 6 pips.
+Code: 6.
+
+Icon: die face with 7 pips.
+Code: 7.
+
+Icon: die face with 8 pips.
+Code: 8.
+
+Icon: die face with 9 pips.
+Code: 9.
+
+
+----------
+---3 1 3: Fudge dice.
+
+Icon: die with plus sign.
+Code: P L U S. PLUS.
+
+Icon: die with minus sign.
+Code: M I N U S. MINUS.
+
+Icon: blank die.
+Code: B L A N K. BLANK.
+
+
+---------- ---3 1 4: Yes, No, And, But... dice. 
+Icon: die with the word 'Yes'.
+Code: Y E S. YES.
+
+Icon: die with the word 'No'.
+Code: N O. NO.
+
+Icon: die with the word 'And'.
+Code: A N D. AND.
+
+Icon: die with the word 'But'.
+Code: B U T. BUT.
+
+Icon: die with the word 'Yes, And'.
+Code: Y E S underscore A N D. YES_AND.
+
+Icon: die with the word 'Yes, But'.
+Code: Y E S underscore B U T. YES_BUT.
+
+Icon: die with the word 'No, And'.
+Code: N O underscore A N D. NO_AND.
+
+Icon: die with the word 'No, But'.
+Code: N O underscore B U T. NO_BUT.
+
+
+----------
+---3 1 5: Dice shapes.
+
+Icon: a die silhouette that's circular on the left and square on the right.
+Code: D 2.
+
+Icon: an equilateral triangular die silhouette pointing up.
+Code: D 4.
+
+Icon: a square die silhouette.
+Code: D 6.
+
+Icon: a d8 silhouette (diamond shape).
+Code: D 8.
+
+Icon: a flat hexagonal die silhouette.
+Code: D 1 0. D10.
+
+Icon: a regular pentagonal die silhouette pointed up.
+Code: D 1 2. D12.
+
+Icon: a regular hexagonal die silhouette.
+Code: D 2 0. D20.
+
+Icon: a tall, thin barrel die silhouette with the points facing up and down.
+Code: B A R R E L. BARREL.
+
+Icon: a wide barrel die silhouette with the points facing left and right.
+Code: H underscore B A R R E L. H_BARREL.
+
+
+----------
+---3 1 6: Dice results.
+
+Icon: Arabic numeral 0 on a die outline.
+Code: 0 underscore O N underscore D 6. 0_ON_D6.
+
+Icon: Arabic numeral 1 on a die outline.
+Code: 1 underscore O N underscore D 6. 1_ON_D6.
+
+Icon: Arabic numeral 2 on a die outline.
+Code: 2 underscore O N underscore D 6. 2_ON_D6.
+
+Icon: Arabic numeral 3 on a die outline.
+Code: 3 underscore O N underscore D 6. 3_ON_D6.
+
+etc. for every die, with every result up to the maximum on that die.
+
+Icon: hatching on a die outline.
+Code: A N Y underscore O N underscore D 6. ANY_ON_D6.
+
+Note 1: These combine 2 codes: result (e.g. 2 underscore O N underscore, 2_ON_) and die (e.g. D 6, D6). Unfortunately, they won’t display correctly in Dark weight.
+Note 3: To create d4, d8, d10, d12, d20, and barrel dice using only standard number and wildcard codes (e.g. numbers like 0, 1, 3, 7, the wildcard code A N Y (ANY)), see SECTION 4 3 6: D4, D8, D10, D12, AND D20 DICE, SECTION 4 3 7: BARREL DICE, and SECTION 4 3 25: D2.
+
+
+----------
+---3 1 7: Taoist trigram dice.
+
+Icon: die with heaven trigram (3 horizontal lines).
+Code: H E A V E N. HEAVEN.
+
+Icon: die with lake/marsh trigram (a split horizontal line above 2 horizontal lines).
+Code 1: L A K E. LAKE.
+Code 2: M A R S H. MARSH.
+
+Icon: die with fire trigram (2 horizontal lines with a split horizontal line between).
+Code: F I R E. FIRE.
+
+Icon: die with thunder trigram (2 split horizontal lines with a horizontal line beneath).
+Code: T H U N D E R. THUNDER.
+
+Icon: die with wind trigram (2 horizontal lines with a split horizontal line beneath).
+Code: W I N D. WIND.
+
+Icon: die with water trigram (two split horizontal lines with a horizontal line between).
+Code: W A T E R. WATER.
+
+Icon: die with mountain trigram (a horizontal line above 2 split horizontal lines).
+Code: M O U N T A I N. MOUNTAIN.
+
+Icon: die with earth/ground trigram (3 split horizontal lines).
+Code 1: E A R T H. EARTH.
+Code 2: G R O U N D. GROUND.
+
+
+----------
+---3 1 8: Other symbol dice.
+
+Icon: die with exclamation mark.
+Code: E X C L A I M. EXCLAIM.
+
+Icon: die with question mark.
+Code: Q U E S T I O N. QUESTION.
+
+Icon: die with diagonal slash.
+Code: S L A S H. SLASH.
+
+Icon: die with a nought, circle, or ring.
+Code 1: N O U G H T. NOUGHT.
+Code 2: C I R C L E. CIRCLE.
+Code 3: R I N G. RING.
+
+Icon: die with a cross.
+Code: C R O S S. CROSS.
+
+Icon: die with a tick or checkmark.
+Code 1: C H E C K. CHECK.
+Code 2: T I C K. TICK.
+
+Icon: die with hatching (dense diagonal lines).
+Code: A N Y. ANY.
+
+Note 1: The any die face is a wildcard used to represent a die face that could be any number (or any other face, depending on the context).
+Note 2: The exclamation and question mark die faces are currently sidelined. They will not be included in translations or developed further. This may change in the future.
+
+
+----------
+---3 1 9: Even and odd dice.
+
+Icon: square die face with a text banner with the word 'even' written on it.
+Code: E V E N (EVEN).
+
+Icon: square die face with a text banner with the word 'odd' written on it.
+Code: O D D (ODD).
+
+Note: To create even and odd versions of d4, d8, d10, d12, d20, and barrel dice, see SECTION 4 3 6: D4, D8, D10, D12, AND D20 DICE and SECTION 4 3 7: BARREL DICE. For even and odd versions of d2 dice, see SECTION 4 3 25: D2.
+
+
+------------------------------
+-----3 2: Dominoes.
+
+---------- ---3 2 1: Dominoes overview.
+
+Dicier includes codes for dominoes with up to 9 pips on each side and wildcards—sides with any number of pips. The two sides of each domino are separated by an underscore. Blank sides are represented using 0. You can create a generic domino with the code D O M I N O (DOMINO).
+
+You can adjust some types of domino icon using these OpenType features (see SECTION 4: ADVANCED FEATURES for further information):
+	• number and wildcard styles (ss01-11);
+	• Chinese dominoes (ss03-05);
+	• blank-zero numerals (cv14);
+	• dotted Arabic numerals 6 and 9 (cv21);
+	• toggle open and slashed 0 (zero).
+
+
+---------- ---3 2 2: Numbered dominoes.
+
+Icon: domino with 0 pips on left and 0 pips on right.
+Code: 0 underscore 0. 0_0.
+
+Icon: domino with 0 pips on left and 1 pip on right.
+Code: 0 underscore 1. 0_1.
+
+Icon: domino with 0 pips on left and 2 pips on right.
+Code: 0 underscore 2. 0_2.
+
+Icon: domino with 0 pips on left and 3 pips on right.
+Code: 0 underscore 3. 0_3.
+
+Icon: domino with 0 pips on left and 4 pips on right.
+Code: 0 underscore 4. 0_4.
+
+Note: The pattern “number underscore number” can be repeated with any numbers from 1 to 9 and 0 on either side of the domino.
+
+
+----------
+---3 2 3: Wildcard dominos.
+
+Icon: domino with hatching on both sides.
+Code 1: A N Y underscore A N Y. ANY_ANY.
+Code 2: A N Y underscore D O M. ANY_DOM.
+
+Icon: domino with hatching on left and 0 pips on right.
+Code: A N Y underscore 0. ANY_0.
+
+Icon: domino with hatching on left and 1 pips on right.
+Code: A N Y underscore 1. ANY_1.
+
+Icon: domino with hatching on left and 2 pips on right.
+Code: A N Y underscore 2. ANY_2.
+
+Icon: domino with hatching on left and 3 pips on right.
+Code: A N Y underscore 3. ANY_3.
+
+Icon: domino with hatching on left and 4 pips on right.
+Code: A N Y underscore 4. ANY_4.
+
+Note: The pattern “A N Y underscore number” or "number underscore A N Y" can be repeated with any numbers from 1 to 9 and 0 on either side of the domino. Note 2: The any domino sides are wildcards used to represent sides that could be any number. For example, the domino 6 underscore A N Y represents a domino where one side (which may specifically be the left side) has 6 pips and the other side can have any number of pips from 1 to 9 or 0.
+
+
+------------------------------
+-----3 3: Playing cards.
+
+----------
+---3 3 1: Playing cards overview.
+ Dicier includes codes for typical card suits and values (numbers, aces and faces, and jokers) and combinations of values and suits such as the ace of spades.
+ The codes for numbered playing card values (e.g. T H R E E (THREE), N I N E (NINE), F I V E (FIVE)) are the words for those numbers, spelled out in uppercase letters. The numeral keys (e.g. 3, 9, 5) are dice codes.
+
+You can adjust some types of playing card icon using these OpenType features (see SECTION 4: ADVANCED FEATURES for further information):
+	• poker dice (cv10-12);
+	• dotted Arabic numerals 6 and 9 (cv21);
+	• pentacle-shaped coins (cv22);
+	• swap staves/staffs and batons (cv23);
+	• crown jewels (cv29);
+	• circled star joker (cv30);
+	• crossed swords (cv39);
+	• toggle open and slashed 0 (zero).
+
+
+---------- ---3 3 2: Card values.
+
+Icon: uppercase A.
+Code: A C E. ACE.
+
+Icon: numeral 2.
+Code: T W O. TWO.
+
+Icon: numeral 3.
+Code: T H R E E. THREE.
+
+Icon: numeral 4.
+Code: F O U R. FOUR.
+
+Icon: numeral 5.
+Code: F I V E. FIVE.
+
+Icon: numeral 6.
+Code: S I X. SIX.
+
+Icon: numeral 7.
+Code: S E V E N. SEVEN.
+
+Icon: numeral 8.
+Code: E I G H T. EIGHT.
+
+Icon: numeral 9.
+Code: N I N E. NINE.
+
+Icon: numeral 10.
+Code: T E N. TEN.
+
+Icon: uppercase J.
+Code: J A C K. JACK.
+
+Icon: uppercase Q.
+Code: Q U E E N. QUEEN.
+
+Icon: uppercase K.
+Code: K I N G. KING.
+
+ ---------- ---3 3 3: Card suits. 
+Icon: hearts suit symbol.
+Code: H E A R T S. HEARTS.
+
+Icon: diamonds suit symbol.
+Code: D I A M O N D S. DIAMONDS.
+
+Icon: clubs suit symbol.
+Code: C L U B S. CLUBS.
+
+Icon: spades suit symbol.
+Code: S P A D E S. SPADES.
+
+
+----------
+---3 3 4: Jokers.
+
+Icon: jester face with pointed cap.
+Code: J O K E R. JOKER.
+
+Icon: jester face with pointed cap, and the word 'RED' underneath.
+Code: R E D underscore J O K E R. RED_JOKER.
+
+Icon: jester face with pointed cap, and the word 'BLACK' underneath.
+Code: B L A C K underscore J O K E R. BLACK_JOKER.
+
+Note: The coloured jokers are actually combinations of two codes: the colour (e.g. R E D, RED) and the joker with an underscore (underscore J O K E R, _JOKER). Both parts must use the same Weight and Mode.
+
+
+----------
+---3 3 5: Card value and suit combinations.
+
+Icon: uppercase A and hearts suit symbol.
+Code: A C E underscore H E A R T S. ACE_HEARTS
+
+Icon: numeral 2 and hearts suit symbol.
+Code: T W O underscore H E A R T S. TWO_HEARTS
+
+Icon: numeral 3 and hearts suit symbol.
+Code: T H R E E underscore H E A R T S. THREE_HEARTS
+
+Icon: numeral 4 and hearts suit symbol.
+Code: F O U R underscore H E A R T S. FOUR_HEARTS
+
+Icon: numeral 5 and hearts suit symbol.
+Code: F I V E underscore H E A R T S. FIVE_HEARTS
+
+Note 1: The pattern “value underscore suit” can be repeated with any other pair of value and suit, e.g. the eight of spades is E I G H T underscore S P A D E S, or the six of clubs is S I X underscore C L U B S. Note 2: These are actually combinations of two codes: the value followed by underscore (e.g. S I X underscore) and the suit (e.g. C L U B S). This means that you can edit each half (e.g. change Modes, Weights, and colours) separately.
+
+
+----------
+---3 3 6: Season suits.
+
+Icon: leaf.
+Code 1: S P R I N G S. SPRINGS.
+Code 2: S P R I N G. SPRING.
+
+Icon: sun.
+Code 1: S U M M E R S. SUMMERS.
+Code 2: S U M M E R. SUMMER.
+
+Icon: sickle.
+Code 1: A U T U M N S. AUTUMNS.
+Code 2: A U T U M N. AUTUMN.
+Code 3: F A L L S. FALLS.
+Code 4: F A L L. FALL.
+
+Icon: snowflake.
+Code 1: W I N T E R S. WINTERS.
+Code 2: W I N T E R. WINTER.
+
+----------
+---3 3 7: Uncommon historical suits.
+
+Icon: circle symbol.
+Code: B U L L E T S. BULLETS.
+
+Icon: cross symbol.
+Code: C R O S S E S. CROSSES.
+
+Icon: five-pointed star symbol.
+Code: S T A R S. STARS.
+
+Icon: crown symbol.
+Code 1: C R O W N. CROWN.
+Code 2: C R O W N S. CROWNS.
+
+Icon: anchor symbol.
+Code: A N C H O R. ANCHOR.
+Code: A N C H O R S. ANCHORS.
+
+Icon: castle tower symbol.
+Code: C A S T L E S. CASTLES.
+
+Icon: leaves symbol.
+Code: L E A V E S. LEAVES.
+
+Icon: eagle symbol.
+Code: E A G L E S. EAGLES.
+
+Note 1: Bullets (as in ‘shot’; think ‘bullet points’) and crosses were introduced in Hiram Jones’ 1895 International deck. Bullets were black and crosses were red. They didn’t catch on.
+Note 2: Several deck manufacturers in the 20th to 21st centuries included stars as a fifth suit in various colours, including yellow, gold, and a red-black combination.
+Note 3: Crowns (red) and anchors (black) are found in some 6-suit decks and the dice game Crown and Anchor.
+Note 4: Crowns, castles, leaves, and eagles were added to decks in the 5-suit bridge fad of 1938-1939. They were typically green or blue. The icons here are the historic pip designs. For a crown in the style of the British crown jewels, see SECTION 4 3 21: CROWN JEWELS.
+
+
+----------
+---3 3 8: Tarot minor arcana.
+This subsection covers the minor arcana. These icons are inter-operable with other features of Dicier (e.g. they do have poker dice versions).
+
+Additional card values:
+
+Icon: capital D.
+Code: D A M S E L. DAMSEL.
+
+Icon: capital M.
+Code: M A I D. MAID.
+
+Icon: capital P.
+Code: P A G E. PAGE.
+
+Icon: capital K and lowercase v.
+Code: K N A V E. KNAVE.
+
+Icon: capital K and lowercase t.
+Code: K N I G H T. KNIGHT.
+
+Additional card suits:
+
+Icon: caduceus-shaped rod symbol.
+Code 1: W A N D S. WANDS.
+Code 2: R O D S. RODS.
+
+Icon: club-shaped stave symbol.
+Code 1: S T A V E S. STAVES.
+Code 2: S T A F F S. STAFFS.
+
+Icon: thin baton symbol.
+Code: B A T O N S. BATONS.
+
+Icon: circled pentacle.
+Code 1: P E N T A C L E. PENTACLE.
+Code 2: D I S K S. DISKS.
+
+Icon: 8-pointed star coin symbol.
+Code: C O I N S. COINS.
+
+Icon: ring symbol.
+Code: R I N G S. RINGS.
+
+Icon: goblet symbol.
+Code 1: C U P S. CUPS.
+Code 2: G O B L E T S. GOBLETS.
+Code 3: C H A L I C E S. CHALICES.
+Code 4: V E S S E L S. VESSELS.
+
+Icon: sword symbol.
+Code 1: S W O R D S. SWORDS.
+Code 2: B L A D E S. BLADES.
+
+
+
+----------
+---3 3 9: Heckadeck.
+
+This subsection covers the Heckadeck by Travis Nichols (find it at https://iamtravisnichols.com for more information). These icons are not always inter-operable with other features of Dicier (e.g. the Heckadeck suits do not have poker dice versions), but otherwise function like ordinary playing cards icons.
+
+Additional card values:
+
+Icon: numeral 0.
+Code: Z E R O. ZERO.
+
+Icon: numeral 11.
+Code: E L E V E N. ELEVEN.
+
+Icon: capital B.
+Code: B E A S T. BEAST.
+
+Icon: capital H.
+Code: H U N T E R. HUNTER.
+
+Icon: capital T.
+Code: T R A V E L. TRAVEL, short for TRAVELER.
+
+Additional card suits:
+
+Icon: acorn.
+Code: A C O R N S. ACORNS.
+
+Icon: ringed planet.
+Code: P L A N E T S. PLANETS.
+
+Icon: fluffy, six-lobed cloud.
+Code: C L O U D S. CLOUDS.
+
+Icon: downward-pointing knife.
+Code: K N I V E S. KNIVES.
+
+Additional combinations:
+All of the Heckadeck suit and value icons can be used together and with other values and suits in the same way as other playing card combinations.
+
+Hunters and Travellers have 2-suit codes that work like these ordinary value-suit combinations but consist of a value (HUNTER or TRAVEL), followed by a Heckadeck suit, followed by a poker suit. Only the combinations found on the Heckadeck cards will work fully (with kerning) and they must be written with the Heckadeck suit first in the pair.
+
+Extra icons:
+
+Icon: capital C.
+Code: C R O N E. CRONE.
+
+Icon: capital W.
+Code: W A T C H E R. WATCHER.
+
+Icon: geometric plane-styled talisman with mathematical symbols and syntax.
+Code: O M N I H E D R O N. OMNIHEDRON.
+
+Icon: rectangle of darkness with a single point of light.
+Code: D A R K N E S S. DARKNESS.
+
+Icon: arrow (as in, ammunition for a bow).
+Code: A R R O W. ARROW.
+
+Icon: geometric plane-styled talisman.
+Code: T A L I S M A N. TALISMAN.
+
+Icon: circled star with letters G R N.
+Code: G R E E N underscore J O K E R. GREEN_JOKER.
+
+Icon: circled star with letters B L U.
+Code: B L U E underscore J O K E R. BLUE_JOKER.
+
+Note 1: You can produced arrows and talismans with the colour labels for red, black, green, and blue in the same way as with jokers, writing the colour, followed by an underscore, followed by A R R O W (ARROW) for a coloured arrow or T A L I S (TALIS) for a coloured talisman.
+Note 2: OMNIHEDRON is actually a combination of two smaller codes, OMNIH (O M N I H) and EDRON (E D R O N). While it's possible that the separate codes may change in the future (e.g. if either word is needed in a translation), the full combination of OMNIHEDRON  will always produce the omnihedron icon.
+
+
+------------------------------
+-----3 4: Other Randomisers.
+
+----------
+---3 4 1: Coins.
+
+Icon: blank coin shape.
+Code: C O I N. COIN.
+
+Icon: coin showing heads.
+Code: H E A D S. HEADS.
+
+Icon: coin showing tails.
+Code: T A I L S. TAILS.
+
+Icon: coin with hatching.
+Code: A N Y underscore F L I P. ANY_FLIP.
+
+Icon: coin standing on edge on a surface.
+Code: O N underscore E D G E. ON_EDGE.
+
+Icon: small coin and a sofa/couch, with an arrow pointing from the coin under a raised cushion.
+Code 1: I N underscore S O F A. IN_SOFA.
+Code 2: I N underscore C O U C H. IN_COUCH.
+
+Note: ANY_FLIP is for flips that could be any result. Stylistic sets affect this icon (see SECTION 4: ADVANCED FEATURES). Dicier doesn’t yet support esoteric outcomes such as ‘coin lands on edge’ or ‘coin falls between cushions’.
+
+
+----------
+---3 4 2: Zener cards.
+
+Icon: circle.
+Code: Z underscore C I R C L E. Z_CIRCLE.
+
+Icon: plus sign.
+Code: Z underscore P L U S. Z_PLUS.
+
+Icon: 3 vertical, slightly wavy lines close together.
+Code: Z underscore W A V E S. Z_WAVES.
+
+Icon: square.
+Code: Z underscore S Q U A R E.
+
+Icon: 5-pointed star.
+Code: Z underscore S T A R. Z_STAR.
+
+
+----------
+---3 4 3: Rock-paper-scissors.
+
+Icon: a rock.
+Code: R O C K. ROCK.
+
+Icon: a sheet of paper.
+Code: P A P E R. PAPER.
+
+Icon: a pair of scissors.
+Code: S C I S S O R S. SCISSORS.
+
+Note 1: For rock-paper-scissors hand gesture icons, see SECTION 4 3 26: ROCK-PAPER-SCISSORS GESTURES.
+Note 2: To reverse rock-paper-scissors icons, see SECTION 4 3 27: REVERSED ROCK-PAPER-SCISSORS.
+
+----------
+---3 4 4: Dreidel.
+
+Icon: generic dreidel face shape: square at the top and pointed at the bottom.
+Code: D R E I D E L. DREIDEL.
+
+Icon: dreidel face with Hebrew letter 'nun'.
+Code 1: N U N. NUN.
+Code 2: נ‎.
+
+Icon: dreidel face with Hebrew letter 'gimel'.
+Code 1: G I M E L. GIMEL.
+Code 2: ג.
+
+Icon: dreidel face with Hebrew letter 'he'.
+Code 1: H E. HE.
+Code 2: ה.
+
+Icon: dreidel face with Hebrew letter 'shin'.
+Code 1: S H I N. SHIN.
+Code 2: ש.
+
+Icon: dreidel face with hatching (dense diagonal lines).
+Code: A N Y underscore S I D E. ANY_SIDE.
+
+Note 1: ANY_SIDE is for sides that could show any letter. Stylistic sets affect this icon (see SECTION 4: ADVANCED FEATURES).
+Note 2: For dreidel icons with handles, see SECTION 4 3 24: DREIDEL HANDLES.
+
+
+
+
+
+==============================
+=====SECTION 4: ADVANCED FEATURES.
+
+------------------------------
+-----4 1: OpenType Overview.
+
+----------
+---4 1 1: What is OpenType?
+ OpenType is a font format with special features—OpenType/OT features—that let you change how a font looks and behaves, if the font has those features. 
+
+---------- ---4 1 2: Which OT features does Dicier have?
+ Dicier uses 6 OT features besides kerning:
+	• standard ligatures let you swap out several glyphs for one other glyph (how Dicier’s codes work);
+	• discretionary ligatures work like standard ligatures, but they’re used for double-digit number codes;
+	• stylistic sets let you swap out a large group of glyphs for a set with a different style;
+	• character variants let you swap out a small group of glyphs to fine-tune a font’s appearance;
+	• contextual alternates let you swap out glyphs based on the letters either side (their context); and
+	• slashed 0 adds a slash across open, O-shaped zeroes.
+
+You can find stylistic sets, character variants, and other settings  in this chapter. Standard ligatures and contextual alternates are normally on by default in most apps, but if not, you can usually activate them in the same places as other OT features. For best results, only switch on one of Dicier’s stylistic sets for a given piece of text or text style.
+
+
+------------------------------
+-----4 2: How to Activate OT Features.
+
+---------- ---4 2 1: ...in Affinity.
+ There are at least 3 ways to switch on OT features in Affinity Suite apps like Affinity Publisher: 	A. The Typography pop-up, found through the top menu through Text, then Show Typography, with its keyboard shortcut. This lets you control features for text you’re selecting. 	B. The Character studio panel, switched on through the top menu through View, then Studio, then Character. This panel’s Typography section lets you control features for text you’re selecting. 	C. The Text Styles studio panel, switched on similarly to the Character panel. This lets you edit text styles by right-clicking a style’s name or left-clicking the icon to its right, then choosing ‘Edit’. You can find stylistic set, character variant, and other settings in the style editing pop-up under Typography > Alternates and Variants.
+
+
+----------
+---4 2 2: ...in LibreOffice.
+ You can switch on OT features in LibreOffice apps that allow you to use and edit text styles, like LibreOffice Writer. 
+There are two ways to switch on OT features in LibreOffie Writer: 	A. The Character pop-up, found through the top menu through Format, then Character. In the ‘Font’ tab, click the ‘Features’ button to open a menu for activating typographic features for text you’re selecting. 	B. The Text Styles panel, switched on in a number of ways, including in the top menu through Styles, then Manage Styles. This lets you edit text styles by right-clicking a style and choosing ‘Modify’. In the style editing pop-up’s ‘Font’ tab, click the ‘Features’ button to open a menu for activating features for that style.
+ IMPORTANT: LibreOffice has trouble recognising Dicier’s Modes and Weights. You may have an easier time if you uninstall any Dicier fonts aside from the one you’re using in your current file, then reinstall them after exporting it. Alternatively, try entering a Mode and Weight in the Font tab’s Typeface field in the format “Mode-Weight” (without quotes). It’s also possible to switch on OT features by typing tags into the font field (see LibreOffice documentation for details).
+
+NOTE FOR OPENOFFICE: Apache OpenOffice does not support OpenType substitutions and therefore the only codes that will work are single-character codes: 1 to 9 and 0, and the Hebrew letters נ‎, ג, ה, and ש. As OpenOffice has been discontinued, it’s unlikely Dicier will ever work in this software. 
+
+----------
+---4 2 3: ...in MS Office.
+ These instructions are for Word from Microsoft Office 365.
+ There are two ways to switch on OT features in MS Office: 	A. The Font Format pop-up, found in the top menu under Format, then Font with its keyboard shortcut. The ‘Advanced’ tab lets you control features for text you’re selecting. 	B. The Text Styles menu, found in the ‘Home’ section of the ribbon menu. This lets you edit text styles by right-clicking a style and choosing ‘Modify’. In the style editing pop-up, choose ‘Font’ from the drop-down menu in the lower left, then click the ‘Advanced’ tab for feature settings.
+ IMPORTANT: MS Office has incomplete support for OT features:
+	• You can’t switch on character variants;
+	• You may need to switch on standard ligatures and contextual alternates manually, as they may not be on by default. You can do this in the 'Advanced' tab mentioned above.
+	• Other MS Office apps (e.g. Powerpoint, Publisher) do not support OT features.
+
+
+----------
+---4 2 4: ...in Scribus.
+
+You can switch on OT features in Scribus in the Style Manager pop-up found in the top menu under Edit, then Styles with its keyboard shortcut. Choose or create a new text style and find the ‘Font Features’ tab (for Paragraph Styles, find it under the Character Style tab).
+ The menu here lets you switch on some, but not all OT features, including stylistic sets (the drop-down menu for stylistic sets lets you switch on more than one, though this isn’t advised when using Dicier).
+ IMPORTANT: Scribus doesn’t currently allow you to switch on character variants (as of v1.5.6.1, on Mac).
+
+
+----------
+---4 2 5: ...in Apple Pages and TextEdit. You can switch on OT features in both Apple Pages and TextEdit by opening the Fonts pop-up, found through the top menu through Format, then Font, then Show Fonts along with its keyboard shortcut. Click the gear menu icon, then ‘Typography’ to open a pop-up that lets you control features for the text you’re selecting (which you can bake into that text’s style using the ‘Update’ button in the Text Style panel on the right).
+ IMPORTANT: These apps have limited support for OT features and user fonts: 	• User-installed fonts may not be available in the drop-down font menu, in which case they must be selected through the Fonts pop-up. 	• Neither app supports character variants.
+
+
+------------------------------
+-----4 3: Deeper Customisation.
+
+---------- ---4 3 1: Numbers and Wildcards (ss01 to ss11).
+ Choose your preferred Number Style (European or Asian pips, Arabic or Roman numerals) and Wildcard Style (hatch, text, and asterisk) to find out which stylistic set to switch on. You can find more information in the following sections.
+
+Stylistic set: none (baseline font).
+Number Style: European pips.
+Wildcard Style: hatching.
+
+Stylistic set: 01.
+Number Style: European pips.
+Wildcard Style: text.
+
+Stylistic set: 02.
+Number Style: European pips.
+Wildcard Style: asterisk.
+
+Stylistic set: 03.
+Number Style: Asian pips.
+Wildcard Style: hatching.
+
+Stylistic set: 04.
+Number Style: Asian pips.
+Wildcard Style: text.
+
+Stylistic set: 05.
+Number Style: Asian pips.
+Wildcard Style: asterisk.
+
+Stylistic set: 06.
+Number Style: Arabic numerals.
+Wildcard Style: hatching.
+
+Stylistic set: 07.
+Number Style: Arabic numerals.
+Wildcard Style: text.
+
+Stylistic set: 08.
+Number Style: Arabic numerals.
+Wildcard Style: asterisk.
+
+Stylistic set: 09.
+Number Style: Roman numerals.
+Wildcard Style: hatching.
+
+Stylistic set: 10.
+Number Style: Roman numerals.
+Wildcard Style: text.
+
+Stylistic set: 11.
+Number Style: Roman numerals.
+Wildcard Style: asterisk.
+ Note: Dominoes become Chinese dominoes in stylistic sets 03 to 05. See SECTION 4 3 3: CHINESE DOMINOES for more information.
+
+
+----------
+---4 3 2: Number Styles.
+
+Dicier has 4 Number Styles for dice and dominoes:
+	• European pip patterns: sparser patterns seen on dice typically used in Europe. Pips often spread to the corners of each face.
+	• Asian pip patterns: denser patterns seen on cube dice typically used in Asia. Pips are closer to the centre and on smaller numbers the pips can be larger (e.g. the 1-pip is larger than the pips on the 6-pip face).
+	• Arabic numerals: Arabic numerals 0 1 2 3 4 5 6 7 8 9.
+	• Roman numerals: Roman numerals N I II III IV V VI VII VIII IX.
+
+Note 1: The roman numeral ‘N’ stands for ‘nulla’, or ‘nothing’, an abbreviation first seen in the early medieval period, not during the time of ancient Rome. Note 2: The die result codes (e.g. 4_ON_D6), non-d6 numbered dice (ss12-18), and double-digit backgammon doubling cube faces are not affected by Number Styles and always use Arabic numerals.
+
+
+----------
+---4 3 3: Backgammon doubling cube.
+Dicier includes double-digit Arabic numeral die faces that can be used to represent the backgammon doubling cube. The doubling cube’s faces are multiples of 2, from 2 to 64. The single-digit faces (2, 4, and 8) can be made using the Arabic numeral number style. In order to use the double-digit number codes (16, 32, and 64), you must activate discretionary ligatures.
+
+Note: The backgammon doubling cube isn’t normally used as a die, though it could be (and sometimes it is called the ‘doubling die’). In backgammon, it’s passed between players and used to keep track of a game’s wager using its upper face.
+
+
+----------
+---4 3 4: Chinese dominoes.
+ Dicier includes Chinese dominoes in stylistic sets 03 to 05. These elongated dominoes have larger pips in different, denser patterns and reach a maximum of 6 pips instead of 9.
+ Note 1: The pattern “number underscore number” can be repeated with any numbers from 1 to 6 and 0 on either side of the domino. Note 2: The double-3 has an unusual pattern (called ‘long threes’). This is the real pattern, not a mistake in Dicier. Note 3: The Chinese dominoes include the same wildcards as the other domino sets, e.g. 4 underscore A N Y.
+
+
+----------
+---4 3 5: Wildcard Styles. Dicier has 3 Wildcard Styles for dice, dominoes, and coin-flips:
+	• Hatch: diagonal hatching (dense diagonal lines) that fill out the die face, domino side, or coin.
+	• Text: the word 'ANY' (uppercase) in the centre of the die face, domino side, or coin.
+	• Asterisk: a large asterisk in the centre of the die face, domino side, or coin. Note 1: At smaller font sizes, the asterisk wildcards can appear to be one-pipped dice or dominoes.
+Note 2: The wildcard die result codes, e.g. ANY_ON_D6, and non-d6 numbered dice (ss12-ss18) are not affected by Wildcard Styles and always use hatching.
+
+
+----------
+---4 3 6: d4, d8, d10, d12 and d20 dice (ss12 to ss16).
+
+You can switch from d6 to other standard polyhedral dice using stylistic sets 12 to 16. This allows you to use number, wildcard, and even/odd codes (e.g. 1, 2, 3, or A N Y, ANY, or E V E N, EVEN, or O D D, ODD) rather than results codes (e.g. 5 underscore O N underscore D 8, 5_ON_D8). You must activate discretionary ligatures when using double-digit codes for d10, d12, and d20.
+
+
+----------
+---4 3 7: Barrel dice (ss17 to ss18).
+
+You can switch from d6 to vertical or horizontal barrel dice using stylistic sets ss17 and 18. Barrel dice use number codes from 0 to 9 and the wildcard code A N Y (ANY).
+
+
+----------
+---4 3 7 1: d100 double-digit d10/barrel dice.
+
+Activating discretionary ligatures and the d10 or barrel dice sets allows double-digit round number codes (00, 10, 20, etc. to 90) to produce single dice with those double-digits, for the purposes of displaying d100-on-2d10 results. For example, activating discretionary ligatures when using the d10 stylistic set, then typing 40 produces a d10 die frame with the number 40 on it.
+
+
+----------
+---4 3 8: Mixing pip patterns (cv01 to cv09).
+ Each character variant from 01 to 09 swaps the European and Asian pip patterns for that numbered die and dice-less pips. 	A. If you’re currently using European pips, that number will show up with the Asian pip pattern. 	B. If you’re currently using Asian pips, that number will show up with the European pip pattern. 	C. If you’re using Arabic or Roman numerals, these character variants will have no effect.
+
+For example, if you're using the baseline font (European pips and hatched wildcards) and switch on character variant 02, all the numbered faces except 2 will have European pip patterns and the 2 will have the Asian pip pattern.
+
+If you keep character variant 02 active and switch to using stylistic set 03 (Asian pips and hatched wildcards), all the numbered faces except 2 will have Asian pip patterns and the effect of character variant 02 will switch the 2 to the European pip pattern.
+
+
+----------
+---4 3 9: Poker/Crown and Anchor dice (cv10 to cv12).
+
+Character variants 10, 11, and 12 transform card suits, values, and jokers into dice (filled/dark symbols on die faces).
+
+Note: This doesn’t affect suit-value combinations, joker colours, or Heckadeck icons.
+
+
+----------
+---4 3 10: Triangular 3-pip patterns (cv13).
+
+Character variant 13 replaces standard 3-pip patterns on dice with triangular 3-pip patterns. This affects European and Asian pipped dice and dice-less pips.
+
+For example, if you're using the baseline font (European pips and hatched wildcards) and switch on character variant 13, the standard pattern of 3 pips in a diagonal line will be replaced with a triangular pattern.
+
+If you keep character variant 13 active and switch to using stylistic set 03 (Asian pips and hatched wildcards), the pips stay in a triangular pattern, but the pips become larger and the pattern becomes denser.
+
+
+----------
+---4 3 11: Blank-zero numerals (cv14).
+
+Character variant 14 replaces 'zero' numerals (0 in Arabic and N in Roman) with blank die faces or domino sides.
+
+For example, if you're using stylistic set 06 (Arabic numerals and hatched wildcards) and switch on character variant 14, the 0 die face will be blank instead of showing an Arabic numeral 0.
+
+If you keep character variant 14 active and switch to using stylistic set 09 (Roman numerals and hatched wildcards), the 0 die face will stay blank.
+
+Note: this doesn't affect dice results codes (e.g. 0 underscore O N underscore D 6), which always use full Arabic numerals.
+
+
+----------
+---4 3 12: Larger 1-pip on Asian dice (cv15).
+
+Character variant 15 increases the size of the pip on the 1 face on Asian pipped dice.
+
+
+----------
+---4 3 13: Rotated 6-, 7-, 8-, 2-, and 3-pip (cv16-20).
+
+Character variants 16 to 20 rotates asymmetrical 6, 7, 8, 2, and 3-pip patterns on dice by 90 degrees. This affects both European and Asian patterns and dice-less pips.
+
+
+----------
+---4 3 14: Dotted Arabic numerals 6 and 9 (cv21).
+
+Character variant 21 adds a dot beside Arabic numerals 6 and 9 on dice (d6, barrel, and poker) and dominoes, to indicate which side the bottom is (to distinguish between the otherwise identical numerals).
+
+
+----------
+---4 3 15: Pentacle-shaped coins (cv22).
+
+Character variant 22 uses pentacles icons for coins in tarot.
+
+
+----------
+---4 3 16: Swap staves/staffs and batons (cv23).
+
+Character variant 23 uses staves/staffs icon for batons in tarot, and vice versa.
+
+
+----------
+---4 3 17: Dice size indicators (cv24).
+
+Character variant 24 shows the number of sides of generic dice icons as a number on those icons (e.g. showing a 6 on the d6 icon (D 6) or a 20 on the d20 icon (D 2 0).
+
+Note: You can’t use this and result codes (e.g. 1_ON_D8) at the same time, as the results codes only overlap with empty dice.
+
+
+----------
+---4 3 18: Dice-less Taoist trigrams (cv25).
+
+Character variant 25 removes dice outlines from trigram icons to display only the trigrams themselves.
+
+
+----------
+---4 3 19: Dice-less pips (cv26).
+
+Character variant 26 removes dice outlines from pipped dice to display only the pips. You can combine this with other features that affect pips (ss03-05; cv01-09, 13, and 15-20).
+
+Note: With cv26 on, 0 becomes an empty glyph. The underlying text (the numeral 0) may not be exported to .pdf files.
+
+
+----------
+---4 3 20: 100-on-d100 d10 and barrel dice (cv28).
+
+Character variant 28 removes the die outline of a '1' in front of two or more '0's in d10 or barrel dice (ss14, 17, 18).
+
+
+----------
+---4 3 21: Crown jewels (cv29).
+
+Character variant 29 replaces the simplified crown used in some 5-suit bridge decks with icons in the style of the British crown jewels.
+
+
+----------
+---4 3 22: Circled star joker (cv30).
+
+Character variant 30 replaces the jester icon with another historical joker symbol, the circled star.
+
+
+----------
+---4 3 23: Pipped d12 (cv31).
+
+Character variant 31 replaces Arabic numerals 1 to 6 and 0 on d12 with pip patterns. The d12 stylistic set (ss15) must also be applied.
+
+Note: These icons are not affected by Number/Wildcard Styles, cv13 (triangular 3-pip), cv15 (enlarged Asian 1-pip), cv19/20/16 (rotated 2-/3-/6-pip), or cv24 (dice size indicators). However, they are affected by cv26 (diceless pips).
+
+
+----------
+---4 3 24: Dreidel handles (cv32).
+
+Character variant 32 adds handles to the top of dreidel icons.
+
+Note: This doesn’t affect the icons’ size or position, so, if used in body text or tables with narrow rows, the handles may protrude into the line or row above.
+
+
+----------
+---4 3 25: d2 (cv33-36).
+
+Character variants 33 to 36 replace 0-pip to 4-pip 6-sided dice with three-dimensional d2 faces (i.e., a d2 shape that’s not just a disc, like a coin). Variants 34 to 36 rotate it by 90 degrees per variant. This also affects the standard hatched wildcard. These dice use pip patterns and can be combined with several character variants that affect pip patterns (cv13 and cv26).
+
+Note 1: These icons are not affected by Number/Wildcard Styles, cv15, or cv19-20. Only cv33 can be combined with cv24.
+Note 2: Results codes (e.g. 1_ON_D2) only use the left-pointing form (seen in cv33).
+
+
+----------
+---4 3 26: Rock-paper-scissors gestures (cv37).
+
+Character variant 37 replaces rock-paper-scissors symbols with hand gestures.
+
+
+----------
+---4 3 27: Reversed rock-paper-scissors (cv38).
+
+Character variant 38 flips rock-paper-scissors icons to right-to-left forms.
+
+
+----------
+---4 3 28: Crossed swords (cv39).
+
+Character variant 39 replaces swords icons with crossed swords icons. This can help distinguish them from similar icons at small font sizes.
+
+
+----------
+---4 3 29: d100 via d10/barrel dice (cv40).
+
+Character variant 40 converts double-digit numbers in the d10 or barrel stylistic sets (ss14, 17, or 18) into a ‘tens’ die and ‘ones’ die, as would be used in a d100 roll. That includes turning the leading 0 of 0 1, 0 2, 0 3, etc. into a double-zero. For example, typing the code '47' normally produces two dice, one with a 4 and another with a 7. With cv40 active, typing the code '47' produces two dice, one with a 40 (tens digit) and another with a 7 (ones digit).
+
+Note: For this to work optimally, discretionary ligatures should be off. Switching off discretionary ligatures and switching on cv40 allows round numbers (10, 20, 30, etc.) to display as two dice (10 and 0, 20 and 0, 30 and 0, etc.) instead of a single die.
+
+----------
+---4 3 30: Toggle open and slashed 0 (zero).
+
+The 'slashed zero' OT feature toggles between open 0 (zero with no slash) and the more distinctive slashed zero. This affects certain card values, as well as dice and dominoes with Arabic numerals (but not if character variant 14, blank zeroes, is active).
+
+Note 1: This can be useful for distinguishing between round card suits or values (e.g. the suit of bullets or the queen value) and the zero of the ten value.
+Note 2: Some of Dicier’s Modes (e.g. Block) have slashed 0 as the default. Activating the ‘slashed zero’ feature will un-slash 0 in these Modes.
+Note 3: To avoid confusion: the OT feature code for slashed 0 is ‘zero’, in case you’re e.g. writing CSS.
+
+
+----------
+---4 4: Limited features in Dicier Pixel.
+ Dicier Pixel is simplified due to its low resolution, so it’s missing some characters and features found in the other fonts. It does not include:
+	• Yes/No/And/But... dice, 	• three-per-em, four-per-em, or six-per-em space (also called third, quarter, and sixth space), 	• alternative Weights,
+	• the backgammon doubling cube, 	• Roman numerals, or text or asterisk wildcard styles (ss01-02, 04-05, 07-11),
+	• d4, d8, d10, d12, and 20 (ss12-16),
+	• poker dice (cv10 to 12),
+	• the circled star joker (cv30),
+	• pipped d12 (cv31),
+	• d2 (cv33-36),
+	• d100 via d10/barrel dice (cv40), and
+	• the ‘in sofa/couch’ esoteric coin outcome icon.
+
+
+
+
+
+==============================
+=====SECTION 5: TRANSLATIONS.
+
+Note: For translation credits, see SECTION 0 2 2: TRANSLATION CREDITS.
+
+------------------------------
+-----5 1: Français.
+
+----------
+---5 1 1: Dé.
+
+Résultats: D 6 souligné T O U T (D6_TOUT), 0 souligné S U R souligné D 6 (0_SUR_D6), 1 souligné S U R souligné D 6 (1_SUR_D6), etc.
+Fudge dé: P L U S (PLUS), M O I N S (MOINS), B L A N C (BLANC).
+Oui, Non, Et, Mais... dé: O U I (OUI), N O N (NON), E T (ET), M A I S (MAIS), O U I souligné E T (OUI_ET), O U I souligné M A I S (OUI_MAIS), N O N souligné E T (NON_ET), N O N souligné M A I S (NON_MAIS).
+Symbole dé: S L A S H (SLASH), C E R C L E (CERCLE), C R O I X (CROIX), C O C H E (COCHE), T O U T (TOUT).
+Dés pairs/impairs: P A I R (PAIR), I M P A I R (IMPAIR).
+
+
+----------
+---5 1 2: Dominos.
+
+N'importe quel domino: D O M souligné T O U T (DOM_TOUT), T O U T souligné 0 (TOUT_0), T O U T souligné 1 (TOUT_1), T O U T souligné 2 (TOUT_2), etc.
+0 souligné T O U T (0_TOUT), 1 souligné T O U T (1_TOUT), 2 souligné T O U T (2_TOUT) etc.
+
+Remarque: D O M I N O (DOMINO) crée un domino générique.
+
+----------
+---5 1 3: Cartes à joeur.
+
+Numéros de carte: A S (AS), D E U X (DEUX), T R O I S (TROIS), Q U A T R E (QUATRE), C I N Q (CINQ), S I X (SIX), S E P T (SEPT), H U I T (HUIT), N E U F (NEUF), D I X (DIX), V A L E T (VALET), D A M E (DAME), R E I N E (REINE), R O I (ROI).
+Enseignes: C Œ U R (CŒUR), C O E U R (COEUR), C A R R E A U (CARREAU), T R È F L E (TRÈFLE), T R E F L E (TREFLE), P I Q U E (PIQUE).
+Combinaisons, e.g. A S souligné P I Q U E (AS_PIQUE).
+Joker: J O K E R (JOKER), J O K E R souligné R O U G E (JOKER_ROUGE), J O K E R souligné N O I R (JOKER_NOIR).
+Ancre, Pique, et Soleil: A N C R E (ANCRE), S O L E I L (SOLEIL).
+
+Remarque: Activez cv10 pour créer des dés avec des symboles d'ancre et de soleil. 
+
+
+----------
+---5 1 4: Autres.
+
+Pièces: P I È C E (PIÈCE), P I E C E (PIECE), F A C E (FACE), P I L E (PILE), P I È C E souligné T O U T (PIÈCE_TOUT), P I E C E souligné T O U T (PIECE_TOUT).
+
+
+------------------------------
+-----5 2: Español.
+
+----------
+---5 2 1: Dado.
+
+Resultados: D 6 guion bajo A L G U N O (D6_ALGUNO), 0 guion bajo E N guion bajo D 6 (0_EN_D6), 1 guion bajo E N guion bajo D 6 (1_EN_D6), 2 guion bajo E N guion bajo D 6 (2_EN_D6) etc.
+Fudge dado: M A S (MAS), M Á S (MÁS), M E N O S (MENOS), B L A N C O (BLANCO), N A D A (NADA).
+Sí, No, Y, Pero... dado: S I guion bajo (SI_), S Í (SÍ), N O (NO), Y guion bajo (Y_), P E R O (PERO), S I guion bajo Y (SI_Y), S Í guion bajo Y (SÍ_Y), S I guion bajo P E R O guion bajo (SI_PERO_), S Í guion bajo P E R O (SÍ_PERO), N O guion bajo Y (NO_Y), N O guion bajo P E R O (NO_PERO).
+Símbolo de dado: B A R R A (BARRA), C I R C U L O (CIRCULO), C Í R C U L O (CÍRCULO), C R U Z guion bajo (CRUZ_), V I S T O (VISTO), T I C (TIC), A L G U N O (ALGUNO).
+Dados pares/impares: P A R (PAR), I M P A R (IMPAR).
+
+
+----------
+---5 2 2: Dominó.
+
+Dominó con ‘cualquier número’: A L G U N O guion bajo D (ALGUNO_D), A L G U N O guion bajo 0 (ALGUNO_0), A L G U N O guion bajo 1 (ALGUNO_1), A L G U N O guion bajo 2 (ALGUNO_2), etc.
+0 guion bajo A L G U N O (0_ALGUNO), 1 guion bajo A L G U N O (1_ALGUNO), 2 guion bajo A L G U N O (2_ALGUNO), etc.
+
+Nota: D O M I N O (DOMINO) o D O M I N Ó (DOMINÓ) crean un dominó genérico.
+
+----------
+---5 2 3: Jugando a las cartas.
+
+Números de cartas: A S (AS), D O S (DOS), T R E S (TRES), C U A T R O (CUATRO), C I N C O (CINCO), S E I S (SEIS), S I E T E (SIETE), O C H O (OCHO), N U E V E (NUEVE), D I E Z (DIEZ), J O T A (JOTA), S O T A (SOTA), R E I N A (REINA), R E Y (REY).
+Trajes de cartas: C O P A S (COPAS), O R O S (OROS), B A S T O S (BASTOS), E S P A D A S (ESPADAS), C O R A Z O N (CORAZON), C O R A Z Ó N (CORAZÓN), R O M B O S (ROMBOS), D I A M A N T E (DIAMANTE), T R E B O L E S (TREBOLES), T R É B O L E S (TRÉBOLES), P I C A S (PICAS).
+Combinaciones p. ej. A S guion bajo P I C A S (AS_PICAS).
+Comodín: J O K E R guion bajo R O J O (JOKER_ROJO), J O K E R guion bajo N E G R O (JOKER_NEGRO), C O M O D I N (COMODIN), C O M O D I N guion bajo R O J O (COMODIN_ROJO), C O M O D I N guion bajo N E G R O (COMODIN_NEGRO), C O M O D Í N (COMODÍN), C O M O D Í N guion bajo R O J O (COMODIN_ROJO), C O M O D Í N guion bajo N E G R O (COMODÍN_NEGRO).
+
+
+----------
+---5 2 4: Otros.
+
+Monedas: M O N E D A (MONEDA), C A R A (CARA), C R U Z (CRUZ), A L G U N A (ALGUNA).
+
+
+------------------------------
+-----5 2: Galego.
+
+Nota: ALGUN e ALGÚN son intercambiables para esta tradución.
+
+
+----------
+---5 2 1: Dado.
+
+Resultados, símbolos, e dados pares/impares: ver tradución ao castelán y uso ALGÚN no canto de ALGUNO.
+
+Fudge dado: M A I S guion bajo (MAIS_), M Á I S (MÁIS), M E N O S (MENOS), B R A N C O (BRANCO).
+Si, Non, E, Pero... dado: S I (SI), N O N (NON), E guion bajo (E_), P E R O, S I guion bajo E (SI_E), S I guion bajo P E R O (SI_PERO), N O N guion bajo E (NON_E), N O N guion bajo P E R O (NON_PERO).
+
+
+----------
+---5 2 3: Xoganda ás cartas.
+
+Números de cartas: A S (AS), D O U S (DOUS), T R E S (TRES), C A T R O (CATRO), C I N C O (CINCO), S E I S (SEIS), S E T E (SETE), O I T O (OITO), N O V E (NOVE), D E Z (DEZ), S O T A (SOTA), P A X E (PAXE), R A I N A (RAINA), R A I Ñ A (RAIÑA), R E I (REI).
+Traxes de cartas y comodín: ver tradución ao castelán y uso:
+	• MOEDAS no canto de OROS,
+	• TREVOS no canto de TREBOLES o TRÉBOLES, e
+	• VERMELLO no canto de ROJO.
+
+
+----------
+---5 2 4: Outros.
+
+Moedas: ver tradución ao castelán y uso:
+	• MOEDA no canto de MONEDA, e
+	• ALGUN_M o ALGÚN_M no canto de ALGUNA.
+
+
+------------------------------
+-----5 4: Književni Hrvatski.
+
+----------
+---5 4 1: Kocke.
+
+Rezultatima: S V E podcrtati O D podcrtati D 6 (SVE_OD_D6), 0 podcrtati O D podcrtati D 6 (0_OD_D6), 1 podcrtati O D podcrtati D 6 (1_OD_D6), itd.
+Fudge kocke: P L U S (PLUS), M I N U S (MINUS), P R A Z N O (PRAZNO).
+Da, Ne, I, Ali... kocke: D A (DA), N E (NE), I podcrtati (I_), A L I (ALI), D A podcrtati I (DA_I), D A podcrtati A L I (DA_ALI), N E podcrtati I (NE_I), N E podcrtati A L I (NE_ALI).
+Symbole dé: C R T A (CRTA), K R U G (KRUG), K R I Z (KRIZ), K R I Ž (KRIŽ), K V A C I C A (KVACICA), K V A Č I C A (KVAČICA), S V E (SVE).
+Parne/neparne kockice: P A R (PAR), N E P A R (NEPAR).
+
+
+----------
+---5 4 2: Domine.
+
+Domine s bilo kojim brojem: S V E podcrtati S V E (SVE_SVE), S V E podcrtati 0 (SVE_0), S V E podcrtati 1 (SVE_1), S V E podcrtati 2 (SVE_2), itd.
+0 podcrtati S V E (0_SVE), 1 podcrtati S V E (1_SVE), 2 podcrtati S V E (2_SVE), itd.
+
+Napomena: D O M I N O (DOMINO) stvara generički domino.
+
+----------
+---5 4 3: Kartanje.
+
+Kartaška odijela: H E R C (HERC), C A R O (CARO), T R E F (TREF), P I K (PIK).
+Brojevi kartica: A S (AS), D V O J K A (DVOJKA), T R O J K A (TROJKA), C E T V O R K A (CETVORKA), Č E T V O R K A (ČETVORKA), P E T I C A (PETICA), S E S T I C A (SESTICA), Š E S T I C A (ŠESTICA), S E D A M I C A (SEDAMICA), O S A M I C A (OSAMICA), D E V E T K A (DEVETKA), D E S E T K A (DESETKA), D E C K O (DECKO), D E Č K O (DEČKO), D A M A (DAMA), K R A L J (KRALJ).
+Kombainacije npr. P I K podcrtati A S (PIK_AS).
+Džoker: D Z O K E R (DZOKER), C R V E N I podcrtati D Z O K E R (CRVENI_DZOKER), C R N I podcrtati D Z O K E R (CRNI_DZOKER), D Ž O K E R (DŽOKER), C R V E N I podcrtati D Ž O K E R (CRVENI_DŽOKER), C R N I podcrtati D Ž O K E R (CRNI_DŽOKER).
+
+
+----------
+---5 4 4: Drugi.
+
+Novčić: N O V C I C (NOVCIC), N O V Č I Ć (NOVČIĆ), G L A V A (GLAVA), R E P (REP), S V E podcrtati N (SVE_N).
+
+
+------------------------------
+-----5 5: Português.
+
+----------
+---5 2 1: Dados.
+
+Resultados: D 6 sublinhada A L G U M A (D6_ALGUMA), 0 sublinhada E M sublinhada D 6 (0_EM_D6), 1 sublinhada E M sublinhada D 6 (1_EM_D6), 2 sublinhada E M sublinhada D 6 (2_EM_D6) etc.
+Fudge dado: M A I S sublinhada (MAIS_), M E N O S (MENOS), V A Z I O (VAZIO).
+Sim, Næo, E, Mas... dados: S I M (SIM), N A O (NAO), N Æ O (NÆO), E sublinhada (E_), M A S sublinhada (MAS_), S I M sublinhada E (SIM_E), S I M sublinhada M A S (SIM_MAS), N A O sublinhada E (NAO_E), N Æ O sublinhada E (NÆO_E), N A O sublinhada M A S (NAO_MAS), N Æ O sublinhada M A S (NÆO_MAS).
+Dado de símbolo: B A R R A (BARRA), C I R C U L O (CIRCULO), C Í R C U L O (CÍRCULO), B O L A (BOLA), X I S (XIS), C H E Q U E (CHEQUE), T I Q U E (TIQUE), V I S T O (VISTO), A L G U M A (ALGUMA).
+Dados pares/impares: P A R (PAR), I M P A R sublinhada (IMPAR_), Í M P A R (ÍMPAR).
+
+
+----------
+---5 2 2: Dominó.
+
+Dominó con qualquer número: A L G U M A sublinhada D (ALGUMA_D), A L G U M A sublinhada 0 (ALGUMA_0), A L G U M A sublinhada 1 (ALGUMA_1), A L G U M A sublinhada 2 (ALGUMA_2), etc.
+0 sublinhada A L G U M A (0_ALGUMA), 1 sublinhada A L G U M A (1_ALGUMA), 2 sublinhada A L G U M A (2_ALGUMA), etc.
+
+Nota: D O M I N O (DOMINO) o D O M I N Ó (DOMINÓ) crean un dominó genérico.
+
+----------
+---5 2 3: Cartas de Jogar.
+
+Números de cartas: A S (AS), Á S (ÁS), D O I S (DOIS), T R E S (TRES), T R Ê S (TRÊS), Q U A T R O (QUATRO), C I N C O (CINCO), S E I S (SEIS), S E T E (SETE), O I T O (OITO), N O V E (NOVE), D E Z (DEZ), V A L E T E (VALETE), D A M A sublinhada (DAMA_), R E I (REI).
+Naipes: C O P A S sublinhada (COPAS_), O U R O S (OUROS), P A U S (PAUS), E S P A D A S sublinhada (ESPADAS_).
+Combinações p. ex. Á S sublinhada E S P A D A S sublinhada (ÁS_ESPADAS_).
+Curinga: C U R I N G A (CURINGA), C U R I N G A sublinhada B R A N C O sublinhada (CURINGA_BRANCO_), C U R I N G A sublinhada P R E T O (CURINGA_PRETO), J O K E R (JOKER), J O K E R sublinhada V E R M E L H O (JOKER_VERMELHO), J O K E R sublinhada P R E T O (JOKER_PRETO).
+
+
+----------
+---5 2 4: Outros.
+
+Monedas: M O E D A (MOEDA), C A R A (CARA), C O R O A (CRUZ), A L G U M A sublinhada M (ALGUMA_M).
+
+
+
+==============================
+=====SECTION 6: CONTACT.
+
+That’s the end of the user guide—for now! If you use Dicier in a project, please let me know about it—I’d love to see how it looks in practice! You can post it publicly at the Dicier community on itch: https://speakthesky.itch.io/typeface-dicier/community .
+ Or you can email me at: contact@speakthesky.com .
