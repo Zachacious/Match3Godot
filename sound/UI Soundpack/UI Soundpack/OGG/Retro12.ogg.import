@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Retro12.ogg-b4d5777578ec69b70992cc85771e170c.oggstr"
+
+[deps]
+
+source_file="res://sound/UI Soundpack/UI Soundpack/OGG/Retro12.ogg"
+dest_files=[ "res://.import/Retro12.ogg-b4d5777578ec69b70992cc85771e170c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

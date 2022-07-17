@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Modern8.wav-0c50370b688c52c41187ccc09965ccc5.sample"
+
+[deps]
+
+source_file="res://sound/UI Soundpack/UI Soundpack/WAV/Modern8.wav"
+dest_files=[ "res://.import/Modern8.wav-0c50370b688c52c41187ccc09965ccc5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -4,6 +4,7 @@ export var width = 600
 export var height = 1024
 
 onready var score_label = $score_panel/Label
+onready var animation_player = score_label.get_node("player")
 
 
 func size_and_position():
@@ -22,6 +23,8 @@ func size_and_position():
 	
 func _update_score():
 	score_label.text = str(Globals.score)
+	animation_player.play("score_jump")
+	
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

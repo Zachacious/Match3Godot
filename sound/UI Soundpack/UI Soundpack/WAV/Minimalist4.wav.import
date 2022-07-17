@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Minimalist4.wav-749f9d46d77e8e6d12cbc15d88e2495c.sample"
+
+[deps]
+
+source_file="res://sound/UI Soundpack/UI Soundpack/WAV/Minimalist4.wav"
+dest_files=[ "res://.import/Minimalist4.wav-749f9d46d77e8e6d12cbc15d88e2495c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

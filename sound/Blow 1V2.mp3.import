@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Blow 1V2.mp3-866926a75ab6c5f18a627df58a3b2e71.mp3str"
+
+[deps]
+
+source_file="res://sound/Blow 1V2.mp3"
+dest_files=[ "res://.import/Blow 1V2.mp3-866926a75ab6c5f18a627df58a3b2e71.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

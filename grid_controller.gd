@@ -136,6 +136,8 @@ func swap_tiles(tile_a, tile_b):
 	# allow each tile to move themselves
 	tile_a.set_index(index_b)
 	tile_b.set_index(index_a)
+	tile_a.swap_sound.play()
+	tile_b.swap_sound.play()
 	yield(get_tree().create_timer(tile_a.tween_speed), "timeout")
 	var a_has_matches = tile_a.find_matches()
 	var b_has_matches = tile_b.find_matches()
@@ -147,6 +149,8 @@ func swap_tiles(tile_a, tile_b):
 		grid_tiles[index_b] = tile_b
 		tile_a.set_index(index_a)
 		tile_b.set_index(index_b)
+		tile_a.swap_sound.play()
+		tile_b.swap_sound.play()
 	else:
 		yield(clean_grid(), "completed")
 		while match_whole_grid():

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/African3.wav-f18228799696e0fd0723224bc1e678fd.sample"
+
+[deps]
+
+source_file="res://sound/UI Soundpack/UI Soundpack/WAV/African3.wav"
+dest_files=[ "res://.import/African3.wav-f18228799696e0fd0723224bc1e678fd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

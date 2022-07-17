@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Minimalist13.mp3-c7416d9393dfe8e3441f026fd5641b7d.mp3str"
+
+[deps]
+
+source_file="res://sound/UI Soundpack/UI Soundpack/MP3/Minimalist13.mp3"
+dest_files=[ "res://.import/Minimalist13.mp3-c7416d9393dfe8e3441f026fd5641b7d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Coffee1.wav-2993c9bafd6cb098ee0ae25557d32923.sample"
+
+[deps]
+
+source_file="res://sound/UI Soundpack/UI Soundpack/WAV/Coffee1.wav"
+dest_files=[ "res://.import/Coffee1.wav-2993c9bafd6cb098ee0ae25557d32923.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Wood Block3.wav-9879f9e7fa2d6fd01e67e0a0bd8e044d.sample"
+
+[deps]
+
+source_file="res://sound/UI Soundpack/UI Soundpack/WAV/Wood Block3.wav"
+dest_files=[ "res://.import/Wood Block3.wav-9879f9e7fa2d6fd01e67e0a0bd8e044d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

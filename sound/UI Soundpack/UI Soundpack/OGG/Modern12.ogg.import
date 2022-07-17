@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Modern12.ogg-e8a0204268e2b62720415d06c0d918e1.oggstr"
+
+[deps]
+
+source_file="res://sound/UI Soundpack/UI Soundpack/OGG/Modern12.ogg"
+dest_files=[ "res://.import/Modern12.ogg-e8a0204268e2b62720415d06c0d918e1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

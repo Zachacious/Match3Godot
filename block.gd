@@ -10,6 +10,8 @@ onready var sprite = $sprite
 onready var move_tween = $move_tween
 onready var destroy_animation = $destroy/AnimationPlayer
 onready var destroy_sprite = $destroy
+onready var destroy_sound = $destroy/destroy_sound
+onready var swap_sound = $sprite/swap_sound
 
 onready var isMatched = false
 onready var direction_deltas = {
@@ -29,7 +31,7 @@ var parent
 func move(target):
 	move_tween.stop_all()
 	move_tween.interpolate_property(self, "position", position, target,\
-	 tween_speed, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
+	 tween_speed, Tween.TRANS_BACK, Tween.EASE_OUT)
 	move_tween.start()
 	
 	
@@ -117,6 +119,7 @@ func destroy():
 	sprite.modulate = Color(1,1,1,0)
 	destroy_sprite.modulate = Color(1,1,1,1)
 	destroy_animation.play("destroy")	
+	destroy_sound.play()
 
 # regenerate texture
 func regen_texture():

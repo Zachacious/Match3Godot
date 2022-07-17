@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/African2.mp3-3453ec59800354068d87471034cbe627.mp3str"
+
+[deps]
+
+source_file="res://sound/UI Soundpack/UI Soundpack/MP3/African2.mp3"
+dest_files=[ "res://.import/African2.mp3-3453ec59800354068d87471034cbe627.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

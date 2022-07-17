@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Coffee1.ogg-9df6cfba3859e0231d3cf27cbe1b93d5.oggstr"
+
+[deps]
+
+source_file="res://sound/UI Soundpack/UI Soundpack/OGG/Coffee1.ogg"
+dest_files=[ "res://.import/Coffee1.ogg-9df6cfba3859e0231d3cf27cbe1b93d5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

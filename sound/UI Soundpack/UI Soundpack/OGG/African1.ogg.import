@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/African1.ogg-8c4b50714d8686d417361ba3bc20f7ff.oggstr"
+
+[deps]
+
+source_file="res://sound/UI Soundpack/UI Soundpack/OGG/African1.ogg"
+dest_files=[ "res://.import/African1.ogg-8c4b50714d8686d417361ba3bc20f7ff.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
