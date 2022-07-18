@@ -14,6 +14,7 @@ onready var tween = $Control/tween
 func size_and_position():
 	var screen_w = get_viewport().size.x
 	var screen_h = get_viewport().size.y
+
 	var scale_factor = 1
 	
 	if screen_w < 600:
