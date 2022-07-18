@@ -1,0 +1,3 @@
+FROM nginx
+
+COPY bin/. /usr/share/nginx/html/
