@@ -10,21 +10,21 @@ onready var moves_label = $Control/Moves/label_node/Label
 onready var moves_node = $Control/Moves/label_node
 onready var tween = $Control/tween
 
-
+# sizes and positions the ui center of the screen
 func size_and_position():
 	var screen_w = get_viewport().size.x
 	var screen_h = get_viewport().size.y
 
 	var scale_factor = 1
 	
+	# if screen is smaller than the project minimum size
+	# set the scalefactor to scale the right amount
 	if screen_w < 600:
 		scale_factor = screen_w / 600
 		scale = Vector2(scale_factor, scale_factor)
 		
 	position.x = screen_w/2 - (width*scale_factor)/2
 	position.y = screen_h/2 - (height*scale_factor)/2
-	
-	
 	
 func _update_score():
 	score_label.text = str(Globals.score)
@@ -38,7 +38,6 @@ func _update_moves():
 	 tween_speed, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	tween.start()
 	
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_tree().get_root().connect("size_changed", self, "size_and_position")

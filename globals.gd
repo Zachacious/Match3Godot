@@ -19,8 +19,6 @@ var blocks =  [
 	{'name':'rabbit','texture':preload("res://sprites/monsters/rabbit.png")},
 ]
 
-#var tile_tween = null
-
 func set_score(value):
 	print('SET_SCORE ', value)
 	score = value

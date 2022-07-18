@@ -1,6 +1,5 @@
 extends Node2D
 
-# configurables
 export var index = 0
 export var texture_index = 0
 export var tween_speed = 0.35
@@ -21,11 +20,7 @@ onready var direction_deltas = {
 	'bottom': 0
 }
 
-# caching the parent - set in ready
 var parent
-
-# var ready_for_deletion = false
-
 
 # tween position changes
 func move(target):
@@ -34,16 +29,12 @@ func move(target):
 	 tween_speed, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	move_tween.start()
 	
-	
 # called by the parent grid container to move the node to a
 # new postiion on the grid
 func set_index(new_index):
 	index = new_index
-	# self.get_parent().move_child(self, index)
-	#get_parent().grid_tiles[index] = self
 	move(Globals.grid.index_positions[index])
 	
-
 # part of find_matches
 # determine if a tile index is within the bounds of the grid
 func isTileInMatchableLane(tile_index, direction):
@@ -58,11 +49,10 @@ func isTileInMatchableLane(tile_index, direction):
 
 	return true
 
-
-# for each direction progress outward checking for matches
-# for every match set isMatched true
+# For each direction, progress outward checking for matches.
+# For every match, set isMatched true
 # returns true if at least one match of 3 is made
-# called by the parent grid if this tile is moved
+# called by the parent grid when this tile is moved
 func find_matches():
 	var matches_were_made = false
 	var tiles = parent.grid_tiles
@@ -110,10 +100,6 @@ func find_matches():
 				tile.isMatched = true
 				
 	return matches_were_made
-	
-	
-# temporary
-func dim(): sprite.modulate = Color(1,1,1,0.3)	
 
 func destroy():
 	sprite.modulate = Color(1,1,1,0)
@@ -133,16 +119,13 @@ func _ready():
 	parent = self.get_parent()
 	direction_deltas.top = -parent.cols
 	direction_deltas.bottom = parent.cols
-
 	regen_texture()
-	
 	destroy_sprite.modulate = Color(1,1,1,0)
 	
 	# set grid position for the global
 	# lookup table
 	if !Globals.grid.coords.has(index): 
 		Globals.grid.coords[index] = Vector2(index % parent.cols, floor(index / parent.cols))
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
